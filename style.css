@@ -169,7 +169,8 @@ nav .flex {
   font-weight: 600;
   font-size: 2.4rem;
 }
-.description .desc .career, .description .desc .favorite {
+.description .desc .career,
+.description .desc .favorite {
   font-size: 1.4rem;
 }
 .description .desc i::before {
@@ -228,10 +229,15 @@ nav .flex {
   border-width: 0 0 15px 15px;
   border-color: transparent transparent #E4011E transparent;
 }
-.gallery .tab-flex {
-  width: calc((100%/3) - 20px);
+@media screen and (min-width: 768px) {
+  .gallery .items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 .gallery .item {
+  margin-bottom: 20px;
   padding: 30px 16px 20px;
   align-items: center;
   background: #f7f7f7;
@@ -257,6 +263,40 @@ nav .flex {
 }
 .gallery .item p {
   line-height: 1.4;
+}
+
+.tag > div {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 6px;
+}
+.tag > div::before {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.s300 {
+  background: #28a838;
+}
+.s300::before {
+  content: "300x250";
+}
+
+.trace {
+  margin-left: 20px;
+  background: #fabd00;
+}
+.trace::before {
+  content: "Trace";
+}
+
+.redesign {
+  margin-left: 20px;
+  background: #dc097b;
+}
+.redesign::before {
+  content: "redesign";
 }
 
 footer {

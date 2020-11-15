@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Banner page | Portfolio</title>
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    body {
+      background-color: #fff;
+    }
+
+    .bntop {
+      padding-top: 150px;
+      line-height: 1.4;
+      position: relative;
+    }
+
+    .bntop img {
+      position: absolute;
+      right: 10px;
+      bottom: 0;
+      width: 150px;
+    }
+
+    .portfolio-site{
+      width: 250px;
+      padding: 12px 30px;
+      background-color:#E83418;
+      border-radius: 4px;
+    }
+    .portfolio-site p{
+      color: #fff;
+      font-weight: 600;
+    }
+
+    @media screen and (min-width: 768px) {
+      .item {
+        width: calc((100%/3) - 15px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="flex">
+      <div class="logo"><img src="/img/logo.png" alt=""></div>
+      <h1>Banner page</h1>
+      <!--flex-->
+    </div>
+    <!--__inner-->
+  </header>
+  <div class="wrapper">
+    <div class="bntop mb30">
+      <p class="tcenter">このサイトは学習の一環で作ったバナーを掲載したサイトです。<br>カードを選択すると、ポップアップで作品の説明が出でます。</p>
+<!--      <img src="img/hedgehog00.png" alt="">-->
+    </div>
+    <main>
+      <div class="gallery">
+        <div class="inner">
+          <div class="items">
+            <div class="item">
+              <a data-fancybox="gallery" href="img/bn_001@2x.png">
+                <img src="img/bn_01im.jpg">
+                <div class="tag flex">
+                  <div class="s300"></div>
+                  <div class="trace"></div>
+                </div>
+              </a>
+            </div>
+            <!--item-->
+            <div class="item">
+              <a data-fancybox="gallery" href="img/bn_002@2x.png">
+                <img src="img/bn_02im.jpg">
+                <div class="tag flex">
+                  <div class="s300"></div>
+                  <div class="trace"></div>
+                </div>
+              </a>
+            </div>
+            <!--item-->
+            <div class="item">
+              <a data-fancybox="gallery" href="img/bn_003@2x.png">
+                <img src="img/bn_03im.jpg">
+                <div class="tag flex">
+                  <div class="s300"></div>
+                  <div class="trace"></div>
+                </div>
+              </a>
+            </div>
+            <!--item-->
+            <div class="item">
+              <a data-fancybox="gallery" href="img/bn_004@2x.png">
+                <img src="img/bn_04im.jpg">
+                <div class="tag flex">
+                  <div class="s300"></div>
+                  <div class="redesign"></div>
+                </div>
+              </a>
+            </div>
+            <!--item-->
+            <div class="item">
+              <a data-fancybox="gallery" href="img/bn_005@2x.png">
+                <img src="img/bn_05im.jpg">
+                <div class="tag flex">
+                  <div class="s300"></div>
+                  <div class="redesign"></div>
+                </div>
+              </a>
+            </div>
+            <!--item-->
+            <div class="item">
+              <a data-fancybox="gallery" href="img/bn_006@2x.png">
+                <img src="img/bn_06im.jpg">
+                <div class="tag flex">
+                  <div class="s300"></div>
+                  <div class="trace"></div>
+                </div>
+              </a>
+            </div>
+            <!--item-->
+            <div class="item">
+              <a data-fancybox="gallery" href="img/bn_007@2x.png">
+                <img src="img/bn_07im.jpg">
+                <div class="tag flex">
+                  <div class="s300"></div>
+                  <div class="redesign"></div>
+                </div>
+              </a>
+            </div>
+            <!--item-->
+            <!--
+            <div class="item">
+              <a data-fancybox="gallery" href="img/bn_008@2x.png">
+                <img src="img/bn_08im.jpg">
+                <div class="tag flex">
+                  <div class="s300"></div>
+                  <div class="trace"></div>
+                </div>
+              </a>
+            </div>
+-->
+            <!--item-->
+            <div class="item">
+              <a data-fancybox="gallery" href="img/bn_009@2x.png">
+                <img src="img/bn_09im.jpg">
+                <div class="tag flex">
+                  <div class="s300"></div>
+                  <div class="trace"></div>
+                </div>
+              </a>
+            </div>
+            <!--item-->
+            <div class="item">
+              <a data-fancybox="gallery" href="img/bn_010@2x.png">
+                <img src="img/bn_10im.jpg">
+                <div class="tag flex">
+                  <div class="s300"></div>
+                  <div class="trace"></div>
+                </div>
+              </a>
+            </div>
+            <!--item-->
+            <div class="item">
+              <a data-fancybox="gallery" href="img/bn_003@2x.png">
+                <img src="img/bn_11im.jpg">
+                <div class="tag flex">
+                  <div class="s300"></div>
+                  <div class="trace"></div>
+                </div>
+              </a>
+            </div>
+            <!--item-->
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="portfolio-site center">
+      <p>Portfolioサイトへいく</p>
+    </div>
+  </div>
+  <footer>
+    <div class="upper">
+      <div id="topBtn" class="tcenter">👆</div>
+    </div>
+    <div class="lower">
+      <div class="inner tcenter"><small style="font-size:1.2rem;">のまろぐ &copy; 2020</small></div>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+</body></html>

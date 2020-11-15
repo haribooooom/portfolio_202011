@@ -175,14 +175,15 @@ nav {
   }
 
   .desc {
-    line-height:1.8;
+    line-height: 1.8;
 
     .name {
       font-weight: 600;
       font-size: 2.4rem;
     }
 
-    .career,.favorite {
+    .career,
+    .favorite {
       font-size: 1.4rem;
     }
 
@@ -247,6 +248,7 @@ nav {
       font-weight: 600;
       font-family: ubuntu;
     }
+
     &::after {
       content: '';
       position: absolute;
@@ -258,18 +260,22 @@ nav {
     }
   }
 
-  .items {}
-
-  .tab-flex {
-    width: calc((100%/3) - 20px);
+  .items {
+      @include mq-tablet {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
   }
 
   .item {
+    margin-bottom: 20px;
     padding: 30px 16px 20px;
     align-items: center;
     background: #f7f7f7;
     box-shadow: $shadow;
     position: relative;
+
     &::after {
       content: '';
       position: absolute;
@@ -279,6 +285,7 @@ nav {
       border-width: 0 0 15px 15px;
       border-color: transparent transparent #023067 transparent;
     }
+
     img {
       width: 100%;
       margin-bottom: 10px;
@@ -292,6 +299,40 @@ nav {
     p {
       line-height: 1.4;
     }
+  }
+}
+
+//banner
+.tag>div{
+  box-shadow: $shadow;
+  padding:10px;
+  border-radius: 6px;
+  &::before {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+}
+.s300 {
+  background: #28a838;
+  &::before {
+    content: "300x250";
+  }
+}
+
+.trace {
+  margin-left: 20px;
+  background: #fabd00;
+  &::before {
+    content: "Trace";
+  }
+}
+
+.redesign {
+  margin-left: 20px;
+  background: #dc097b;
+  &::before {
+    content: "redesign";
   }
 }
 
