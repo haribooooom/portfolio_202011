@@ -1,0 +1,316 @@
+@charset 'utf-8';
+
+$base:#fff;
+$main:#4f4141;
+$sub:#aad95e;
+$accent:#d95e5e;
+$bl:#333;
+$gr:#c7c7c7;
+$shadow:0 2px 6px hsla(0, 0%, 0%, 0.2);
+$border:1px solid #aaa;
+
+body {
+  background-color: #F8F6E7;
+  color: #222;
+}
+
+//layout-size
+@mixin mq-tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mq-pc {
+  @media screen and (min-width: 1080px) {
+    @content;
+  }
+}
+
+@for $btm from 1 through 8 {
+  .mb#{$btm}0 {
+    margin-bottom: 10px * $btm;
+  }
+}
+
+.inner {
+  padding: 40px 15px;
+}
+
+main > div:nth-of-type(2n) {
+  background-color: #fff;
+}
+
+//font
+h1,
+h2,
+h3,
+.title,
+.big {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+p,
+li,
+li a,
+a,
+label {
+  font-size: 1.6rem;
+}
+
+.big {
+  font-weight: 800;
+}
+
+//position
+
+.center {
+  margin: 0 auto;
+}
+
+.tcenter {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+@include mq-tablet {
+  .tab-flex {
+    display: flex;
+  }
+}
+
+.more a {
+  width: 200px;
+  padding: 10px;
+  display: block;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #fff;
+  background-color: $bl;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(1.5px);
+  box-shadow: $shadow;
+  position: fixed;
+  z-index: 999;
+
+  .flex {
+    align-items: center;
+  }
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 1.5rem;
+}
+
+nav {
+  width: calc(100vw - 85px);
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+
+  //  background-color:red;
+  .flex {
+    justify-content: space-around;
+  }
+}
+
+.top {
+  padding-top: 165px;
+  height: 85vh;
+  position: relative;
+  background-color: #d7fad7;
+  text-align: center;
+
+  p {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+
+  img.hedgehog {
+    bottom: 40px;
+    right: 25px;
+    position: absolute;
+    width: 90px;
+  }
+}
+
+//about
+.description {
+  .inner {
+    margin: 0 auto;
+  }
+
+  .img {
+    max-width: 240px;
+    border-radius: 50%;
+    box-shadow: $shadow;
+    margin-bottom: 25px;
+  }
+
+  .desc {
+    line-height:1.8;
+
+    .name {
+      font-weight: 600;
+      font-size: 2.4rem;
+    }
+
+    .career,.favorite {
+      font-size: 1.4rem;
+    }
+
+    i::before {
+      margin-right: 1rem;
+      content: "\f004";
+      color: #E83418;
+    }
+  }
+}
+
+//skil
+.skil {
+  .items {}
+
+  .item {
+    height: 100px;
+    padding: 12px;
+    align-items: center;
+    background: #fafafa;
+    box-shadow: $shadow;
+
+    img {
+      width: 70px;
+      margin-right: 30px;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+    }
+
+    p {
+      line-height: 1.2;
+    }
+  }
+}
+
+.gallery {
+  .inner {
+    @include mq-tablet {
+      padding: 40px 60px 110px;
+    }
+  }
+
+  .top-desc p {
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+
+
+  .postit {
+    margin-bottom: 70px;
+    padding: 10px;
+    max-width: 200px;
+    position: relative;
+    text-align: center;
+    background: #fafafa;
+    box-shadow: $shadow;
+
+    p {
+      font-size: 2rem;
+      font-weight: 600;
+      font-family: ubuntu;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      bottom: 0;
+      right: 0;
+      border-width: 0 0 15px 15px;
+      border-color: transparent transparent #E4011E transparent;
+    }
+  }
+
+  .items {}
+
+  .tab-flex {
+    width: calc((100%/3) - 20px);
+  }
+
+  .item {
+    padding: 30px 16px 20px;
+    align-items: center;
+    background: #f7f7f7;
+    box-shadow: $shadow;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      bottom: 0;
+      right: 0;
+      border-width: 0 0 15px 15px;
+      border-color: transparent transparent #023067 transparent;
+    }
+    img {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    p {
+      line-height: 1.4;
+    }
+  }
+}
+
+footer {
+  position: relative;
+  background-color: $bl;
+  color: #fff;
+
+  #topBtn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    background-color: $bl;
+  }
+
+  .lower {
+    padding: 10px 0;
+  }
+}
