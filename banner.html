@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Banner page | Portfolio</title>
-
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="/style.css">
   <style>
@@ -28,16 +28,21 @@
     }
 
     .portfolio-site{
-      width: 250px;
-      padding: 12px 30px;
+      max-width: 220px;
+      padding: 10px;
       background-color:#E83418;
       border-radius: 4px;
+      margin-bottom: 80px;
     }
     .portfolio-site p{
       color: #fff;
       font-weight: 600;
     }
-
+    i::before {
+      margin-left: 1rem;
+      content: "\f08e ";
+      color: #fff;
+    }
     @media screen and (min-width: 768px) {
       .item {
         width: calc((100%/3) - 15px);
@@ -57,7 +62,7 @@
   </header>
   <div class="wrapper">
     <div class="bntop mb30">
-      <p class="tcenter">このサイトは学習の一環で作ったバナーを掲載したサイトです。<br>カードを選択すると、ポップアップで作品の説明が出でます。</p>
+      <p class="tcenter">このサイトは学習の一環で作ったバナーを<br>掲載したサイトです。<br>カードを選択すると、<br>ポップアップで作品の説明が出でます。</p>
 <!--      <img src="img/hedgehog00.png" alt="">-->
     </div>
     <main>
@@ -181,7 +186,9 @@
       </div>
     </main>
     <div class="portfolio-site center">
-      <p>Portfolioサイトへいく</p>
+     <a href="./index.html">
+      <p>Portfolioサイトへいく<i class="fa" aria-hidden="true"></i></p>
+     </a>
     </div>
   </div>
   <footer>
