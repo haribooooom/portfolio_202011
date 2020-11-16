@@ -1,16 +1,13 @@
 @charset 'utf-8';
 
-$base:#fff;
-$main:#4f4141;
-$sub:#aad95e;
-$accent:#d95e5e;
+$wh:#fff;
+$acs:#E83418;
 $bl:#333;
-$gr:#c7c7c7;
 $shadow:0px 1px 2px rgba(0, 0, 0, 0.2);
 $border:1px solid #aaa;
 
 body {
-  background-color: #fff;
+  background-color: $wh;
   color: #222;
 }
 
@@ -35,9 +32,9 @@ body {
 
 .inner {
   margin: 0 auto;
-  padding: 40px 15px;
-
+  padding: 40px 15px 60px;
   @include mq-tablet {
+    padding: 60px 0 80px;
     max-width: 980px;
   }
 }
@@ -86,7 +83,9 @@ label {
 .tcenter {
   text-align: center;
 }
-
+.tleft{
+  text-align: left;
+}
 .flex {
   display: flex;
 }
@@ -101,7 +100,7 @@ header {
   width: 100%;
   height: 80px;
   padding: 15px;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(1.5px);
   box-shadow: $shadow;
   position: fixed;
@@ -153,7 +152,7 @@ nav {
 
   .current {
     a {
-      color: #fafafa;
+      color: $wh;
       font-weight: 600;
     }
   }
@@ -162,7 +161,7 @@ nav {
 .top {
   padding-top: 125px;
   height: 80vh;
-  background-color: #ffffff;
+  background-color: $wh;
   text-align: center;
 
   p {
@@ -195,7 +194,7 @@ nav {
 
   .desc {
     line-height: 1.8;
-    text-align: left;
+//    text-align: left;
 
     @include mq-tablet {
       width: 50%;
@@ -214,7 +213,7 @@ nav {
     i::before {
       margin-right: 0.2rem;
       content: "\f004";
-      color: #E83418;
+      color: $acs;
     }
   }
 }
@@ -350,7 +349,6 @@ nav {
 .contact {
   @include mq-tablet {
     .tab-flex {
-      width: 100%;
       justify-content: space-around;
       align-items: center;
       flex-direction: row-reverse;
@@ -360,6 +358,14 @@ nav {
   .left {
     font-size: 1.6rem;
     line-height: 1.8;
+      @include mq-tablet {
+    width: 30%;
+    }
+  }
+  .right {
+      @include mq-tablet {
+    width: 45%;
+    }
   }
 
   .title {
@@ -426,6 +432,10 @@ textarea {
   box-shadow: $shadow;
 }
 
+textarea{
+  height: 100px;
+}
+
 ::-webkit-input-placeholder,
 :-moz-placeholder,
 ::-moz-placeholder,
@@ -437,19 +447,19 @@ textarea {
 button {
   margin-top: 10px;
   margin-bottom: 40px;
-  background-color: #E83418;
+  background-color: $acs;
   padding: 12px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
-  border: 1px solid #E83418;
+  border: 1px solid $acs;
   -webkit-transition: .5s;
   transition: .5s;
   display: inline-block;
   cursor: pointer;
-  margin-left: 60%;
-  width: 40%;
-  color: #fff;
+  margin-left: 50%;
+  width: 50%;
+  color: $wh;
   box-shadow: $shadow;
 
 }
@@ -482,7 +492,7 @@ p {
 footer {
   position: relative;
   background-color: $bl;
-  color: #fff;
+  color: $wh;
 
   #topBtn {
     position: fixed;
@@ -516,12 +526,12 @@ footer {
 .portfolio-site {
   max-width: 220px;
   padding: 10px;
-  background-color: #E83418;
+  background-color: $acs;
   border-radius: 4px;
   margin-bottom: 80px;
 
   p {
-    color: #fff;
+    color: $wh;
     font-weight: 600;
   }
 }
@@ -532,7 +542,7 @@ footer {
   border-radius: 6px;
 
   &::before {
-    color: #fff;
+    color: $wh;
     font-size: 1.6rem;
     font-weight: 600;
   }
