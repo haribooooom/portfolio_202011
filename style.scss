@@ -6,7 +6,7 @@ $sub:#aad95e;
 $accent:#d95e5e;
 $bl:#333;
 $gr:#c7c7c7;
-$shadow:0 2px 6px hsla(0, 0%, 0%, 0.2);
+$shadow:0px 1px 2px rgba(0, 0, 0, 0.2);
 $border:1px solid #aaa;
 
 body {
@@ -185,7 +185,8 @@ nav {
 
   .desc {
     line-height: 1.8;
-text-align: left;
+    text-align: left;
+
     @include mq-tablet {
       width: 50%;
     }
@@ -229,7 +230,8 @@ text-align: left;
     margin-bottom: 20px;
     align-items: center;
     background: #fafafa;
-   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+
     img {
       width: 70px;
       margin-right: 30px;
@@ -394,17 +396,49 @@ text-align: left;
 
 //contact
 .contact {
-    @include mq-tablet {
-      .tab-flex{
-        width: 100%;
-        justify-content: space-around;
-        align-items: center;
-        flex-direction: row-reverse;
-      }
+  @include mq-tablet {
+    .tab-flex {
+      width: 100%;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row-reverse;
+    }
   }
-  .left{
+
+  .left {
     font-size: 1.6rem;
     line-height: 1.8;
+  }
+
+  .title {
+    text-align: left;
+  }
+
+  i::before {
+    margin:0 0.5rem;
+  }
+
+  .fa-name::before {
+    content: "\f007";
+  }
+
+  .fa-mail::before {
+    content: "\f0e0";
+  }
+  .fa-affiliation::before {
+    content: "\f1ad";
+  }
+
+  .fa-message::before {
+    content: "\f075";
+  }
+  .fa-send::before {
+    content: "\f1d8";
+  }
+  span:after{
+    content: "*";
+    margin-left: 0.5rem;
+    color: red;
   }
 }
 
@@ -413,7 +447,7 @@ form {
   width: 100%;
 
   @include mq-tablet {
-//    width: 60%;
+    //    width: 60%;
   }
 }
 
@@ -465,7 +499,7 @@ button {
   margin-top: 15px;
   margin-bottom: 25px;
   background-color: #2ABCA7;
-  padding: 12px 45px;
+  padding: 12px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
@@ -474,8 +508,8 @@ button {
   transition: .5s;
   display: inline-block;
   cursor: pointer;
-  margin-left: 50%;
-  width: 50%;
+  margin-left: 60%;
+  width: 40%;
   color: #fff;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
 
@@ -513,7 +547,7 @@ button:hover,
   color: #777
 }
 
-.contact .thxMessage p{
+.contact .thxMessage p {
   font-size: 1.2rem;
   font-weight: 900;
   font-family: 'lato', sans-serif;
@@ -531,7 +565,8 @@ footer {
     position: fixed;
     bottom: 0;
     right: 10px;
-    &:hover{
+
+    &:hover {
       cursor: pointer;
     }
   }
