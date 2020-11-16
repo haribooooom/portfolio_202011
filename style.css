@@ -265,6 +265,30 @@ nav .flex {
   line-height: 1.4;
 }
 
+.bntop {
+  padding-top: 150px;
+  line-height: 1.4;
+  position: relative;
+}
+.bntop img {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  width: 150px;
+}
+
+.portfolio-site {
+  max-width: 220px;
+  padding: 10px;
+  background-color: #E83418;
+  border-radius: 4px;
+  margin-bottom: 80px;
+}
+.portfolio-site p {
+  color: #fff;
+  font-weight: 600;
+}
+
 .tag > div {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   padding: 10px;

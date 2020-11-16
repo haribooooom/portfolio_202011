@@ -303,18 +303,47 @@ nav {
 }
 
 //banner
-.tag>div{
+.bntop {
+  padding-top: 150px;
+  line-height: 1.4;
+  position: relative;
+
+  img {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    width: 150px;
+  }
+}
+
+.portfolio-site {
+  max-width: 220px;
+  padding: 10px;
+  background-color: #E83418;
+  border-radius: 4px;
+  margin-bottom: 80px;
+
+  p {
+    color: #fff;
+    font-weight: 600;
+  }
+}
+
+.tag > div {
   box-shadow: $shadow;
-  padding:10px;
+  padding: 10px;
   border-radius: 6px;
+
   &::before {
     color: #fff;
     font-size: 1.6rem;
     font-weight: 600;
   }
 }
+
 .s300 {
   background: #28a838;
+
   &::before {
     content: "300x250";
   }
