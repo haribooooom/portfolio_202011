@@ -123,9 +123,13 @@ nav {
 
   li {
     a {
+      font-size: 1.2rem;
       position: relative;
       display: inline-block;
       text-decoration: none;
+        @include mq-tablet {
+          font-size:2rem;
+      }
     }
 
     a::after {
@@ -295,7 +299,7 @@ nav {
         bottom: 0;
         right: 0;
         border-width: 0 0 15px 15px;
-        border-color: transparent transparent #E4011E transparent;
+        border-color: transparent transparent $acs transparent;
       }
     }
   }
@@ -394,12 +398,14 @@ nav {
 
   .fa-send::before {
     content: "\f1d8";
+    margin:0;
+    margin-left:0.5rem;
   }
 
   span:after {
     content: "*";
     margin-left: 0.5rem;
-    color: red;
+    color: $acs;
   }
 }
 
@@ -448,7 +454,7 @@ button {
   margin-top: 10px;
   margin-bottom: 40px;
   background-color: $acs;
-  padding: 12px;
+  padding: 10px 0;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
@@ -457,11 +463,15 @@ button {
   transition: .5s;
   display: inline-block;
   cursor: pointer;
-  margin-left: 50%;
-  width: 50%;
   color: $wh;
   box-shadow: $shadow;
-
+  margin-left: 50%;
+  width: 50%;
+  @include mq-tablet {
+  margin-left: 60%;
+  width: 40%;
+    letter-spacing: 0.5rem;
+}
 }
 
 button:hover,
@@ -478,7 +488,7 @@ button:hover,
 }
 
 .errorText {
-  color: red;
+  color: $acs;
 }
 
 .contact .thxMessage {
@@ -557,8 +567,8 @@ footer {
 }
 
 .trace {
-  margin-left: 20px;
   background: #fabd00;
+  margin-left: 20px;
 
   &::before {
     content: "Trace";
@@ -566,8 +576,8 @@ footer {
 }
 
 .redesign {
-  margin-left: 20px;
   background: #dc097b;
+  margin-left: 20px;
 
   &::before {
     content: "redesign";

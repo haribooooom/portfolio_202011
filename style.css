@@ -126,9 +126,15 @@ nav {
   font-weight: 300;
 }
 nav li a {
+  font-size: 1.2rem;
   position: relative;
   display: inline-block;
   text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  nav li a {
+    font-size: 2rem;
+  }
 }
 nav li a::after {
   position: absolute;
@@ -270,7 +276,7 @@ nav .current a {
   bottom: 0;
   right: 0;
   border-width: 0 0 15px 15px;
-  border-color: transparent transparent #E4011E transparent;
+  border-color: transparent transparent #E83418 transparent;
 }
 @media screen and (min-width: 768px) {
   .gallery .items {
@@ -349,11 +355,13 @@ nav .current a {
 }
 .contact .fa-send::before {
   content: "\f1d8";
+  margin: 0;
+  margin-left: 0.5rem;
 }
 .contact span:after {
   content: "*";
   margin-left: 0.5rem;
-  color: red;
+  color: #E83418;
 }
 
 form {
@@ -400,7 +408,7 @@ button {
   margin-top: 10px;
   margin-bottom: 40px;
   background-color: #E83418;
-  padding: 12px;
+  padding: 10px 0;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
@@ -409,10 +417,17 @@ button {
   transition: .5s;
   display: inline-block;
   cursor: pointer;
-  margin-left: 50%;
-  width: 50%;
   color: #fff;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  margin-left: 50%;
+  width: 50%;
+}
+@media screen and (min-width: 768px) {
+  button {
+    margin-left: 60%;
+    width: 40%;
+    letter-spacing: 0.5rem;
+  }
 }
 
 button:hover,
@@ -429,7 +444,7 @@ button:hover,
 }
 
 .errorText {
-  color: red;
+  color: #E83418;
 }
 
 .contact .thxMessage {
@@ -499,16 +514,16 @@ footer .lower {
 }
 
 .trace {
-  margin-left: 20px;
   background: #fabd00;
+  margin-left: 20px;
 }
 .trace::before {
   content: "Trace";
 }
 
 .redesign {
-  margin-left: 20px;
   background: #dc097b;
+  margin-left: 20px;
 }
 .redesign::before {
   content: "redesign";
