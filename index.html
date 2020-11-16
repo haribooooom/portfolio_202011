@@ -38,7 +38,6 @@
       </div>
       <div class="desc mb50">
         <p>このサイトでは、自身の紹介と <br>いくつかのデザイン作品を掲載しています。</p>
-      </div><img class="hedgehog" src="img/hedgehog00.png" alt="">
       <!--inner-->
     </div>
     <div class="scroll-btn">
@@ -143,7 +142,7 @@
             <!--item-->
             <div class="item">
               <a data-fancybox="gallery" href="img/bn_010@2x.png">
-                <img src="img/bn_10im.jpg"  alt="hoge">
+                <img src="img/bn_10im.jpg" alt="hoge">
                 <div class="tag flex">
                   <div class="s300"></div>
                   <div class="trace"></div>
@@ -153,7 +152,7 @@
             <!--item-->
             <div class="item">
               <a data-fancybox="gallery" href="img/bn_003@2x.png">
-                <img src="img/bn_11im.jpg"  alt="hoge">
+                <img src="img/bn_11im.jpg" alt="hoge">
                 <div class="tag flex">
                   <div class="s300"></div>
                   <div class="trace"></div>
@@ -164,50 +163,62 @@
           </div>
           <!--inner-->
         </div>
-        </div>
-        <div class="contact" id="contact">
-          <div class="inner">
+      </div>
+      <div class="contact" id="contact">
+        <div class="inner">
 
-            <h2>CONTACT</h2>
-            <p class="tcenter mb60">ご連絡、ご感想等の返信は3日以内にいたします。</p>
-            <form id="form" action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSf2k-yKUk7TTkkH33WYzRMVt8C90Y29JH25d0JCIhJUGxEZ8Q/formResponse" method="post" target="dummyIframe">
-              <div class="wrap">
+          <h2>CONTACT</h2>
+          <div class="tab-flex">
+            <div class="right">
+              <form id="form" action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSf2k-yKUk7TTkkH33WYzRMVt8C90Y29JH25d0JCIhJUGxEZ8Q/formResponse" method="post" target="dummyIframe">
+                <div class="wrap">
 
-                <p class="form-title">お名前</p>
-                <p class="form-box"><input id="name" name="entry.1645516517" type="text" placeholder="お名前を入力してください" required></p>
+                  <p class="title">お名前</p>
+                  <p class="box"><input id="name" name="entry.1645516517" type="text" placeholder="お名前を入力してください" required></p>
 
-                <p class="form-title">メールアドレス</p>
-                <p class="form-box"><input id="mail" name="entry.95707137" type="email" placeholder="メールアドレスを入力してください" required></p>
+                  <p class="title">メールアドレス</p>
+                  <p class="box"><input id="mail" name="entry.95707137" type="email" placeholder="メールアドレスを入力してください" required></p>
 
-                <p class="form-title">所属(optional)</p>
-                <p class="form-box"><input id="affiliation" name="entry.278213660" type="text" placeholder="所属を入力してください"></p>
+                  <p class="title">所属(optional)</p>
+                  <p class="box"><input id="affiliation" name="entry.278213660" type="text" placeholder="所属を入力してください"></p>
 
-                <p class="form-title">メッセージ</p>
-                <p class="form-box"><textarea id="textArea" name="entry.1998329122" cols="40" rows="5" placeholder="メッセージを入力してください" required></textarea></p>
-                <div class="btn-aria">
-                  <button id="submit-btn" type="submit">送信する</button>
-                </div><!-- /.btn-aria -->
-              </div>
-              <!--wrap-->
-            </form>
-
-            <iframe name="dummyIframe" class="dummy">
-            </iframe>
-            <div class="thxMessage">
-             <img src="img/hedgehog01.png" alt="">
-              <p>お問い合わせは無事送信されました。</p>
-              <p>後日担当のものより改めて確認のメールを送信させていただきます。</p>
-              <p><a href="#">ホームへ戻る</a></p>
+                  <p class="title">メッセージ</p>
+                  <p class="box"><textarea id="textArea" name="entry.1998329122" cols="40" rows="5" placeholder="メッセージを入力してください" required></textarea></p>
+                  <div class="btn">
+                    <button id="submit" type="submit">送信する</button>
+                  </div><!-- /.btn-aria -->
+                </div>
+                <!--wrap-->
+              </form>
             </div>
-            <!--thxMessage-->
-
+            <div class="left">
+              <div class="tcenter mb80 big">Thank you for visiting my website!
+                <br>
+                How was it?
+                <br>
+                Please tell me your impressions.
+              </div>
+              <img src="img/hedgehog010.png" alt="">
+            </div>
           </div>
-          <!--inner-->
+          <iframe name="dummyIframe" class="dummy">
+          </iframe>
+          <div class="thxMessage">
+            <img src="img/hedgehog01.png" alt="">
+            <p>お問い合わせは無事送信されました。</p>
+            <p>後日担当のものより改めて確認のメールを送信させていただきます。</p>
+            <p><a href="#">ホームへ戻る</a></p>
+          </div>
+          <!--thxMessage-->
+
+
         </div>
+        <!--inner-->
+      </div>
     </main>
     <footer>
       <div class="upper">
-        <div id="topBtn" class="tcenter">👆</div>
+        <div id="topBtn" class="tcenter"><img src="img/top.png" alt=""></div>
       </div>
       <div class="lower">
         <div class="inner tcenter"><small style="font-size:1.2rem;">のまろぐ &copy; 2020</small></div>
@@ -290,11 +301,8 @@
 
 
     });
-
   </script>
 
   <script src="js/main.js">
   </script>
-</body>
-
-</html>
+</body></html>

@@ -147,10 +147,10 @@ nav {
 }
 
 .top {
-  padding-top: 165px;
-  height: 80vh;
+  padding-top: 125px;
+  height: 50vh;
   position: relative;
-  background-color: #d7fad7;
+  background-color: #ffffff;
   text-align: center;
 
   p {
@@ -172,6 +172,7 @@ nav {
     @include mq-tablet {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
   }
 
@@ -184,7 +185,7 @@ nav {
 
   .desc {
     line-height: 1.8;
-
+text-align: left;
     @include mq-tablet {
       width: 50%;
     }
@@ -392,14 +393,27 @@ nav {
 
 
 //contact
-.contact {}
+.contact {
+    @include mq-tablet {
+      .tab-flex{
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row-reverse;
+      }
+  }
+  .left{
+    font-size: 1.6rem;
+    line-height: 1.8;
+  }
+}
 
 form {
   margin: 0 auto;
   width: 100%;
 
   @include mq-tablet {
-    width: 60%;
+//    width: 60%;
   }
 }
 
@@ -465,10 +479,6 @@ button {
   color: #fff;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
 
-  @include mq-tablet {
-    margin-left: 65%;
-    width: 35%;
-  }
 }
 
 button:hover,
@@ -476,20 +486,6 @@ button:hover,
   background: #19a08c;
 }
 
-label.error {
-  font-family: 'Source Sans Pro', arial, sans-serif;
-  font-size: 1em;
-  display: block;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #d89c9c;
-  width: 80%;
-  margin: auto;
-  color: #FAFAFA;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-}
 
 /* media queries */
 @media (max-width: 700px) {
@@ -502,10 +498,6 @@ label.error {
   display: none;
 }
 
-.thxMessage {
-  display: none;
-}
-
 .myform {
   display: none;
 }
@@ -514,30 +506,21 @@ label.error {
   color: red;
 }
 
-
-.dummy {
-  display: none
-}
-
 .contact .thxMessage {
   display: none;
-  text-align: center
-}
-
-.contact .thxMessage p.special {
-  font-size: 2.2rem;
-  font-weight: 900;
-  font-family: 'lato', sans-serif;
-  letter-spacing: 0.05em;
-  color: #bde1da;
-  text-shadow: 0 0 1px #000
-}
-
-.thxMessage {
+  text-align: center;
   line-height: 1.8;
   color: #777
 }
 
+.contact .thxMessage p{
+  font-size: 1.2rem;
+  font-weight: 900;
+  font-family: 'lato', sans-serif;
+  letter-spacing: 0.05em;
+  color: $bl;
+  text-shadow: $shadow;
+}
 
 footer {
   position: relative;
@@ -545,13 +528,12 @@ footer {
   color: #fff;
 
   #topBtn {
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    right: 0;
-    width: 70px;
-    height: 70px;
-    padding: 10px;
-    background-color: $bl;
+    right: 10px;
+    &:hover{
+      cursor: pointer;
+    }
   }
 
   .lower {

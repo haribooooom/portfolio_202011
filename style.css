@@ -142,10 +142,10 @@ nav .flex {
 }
 
 .top {
-  padding-top: 165px;
-  height: 80vh;
+  padding-top: 125px;
+  height: 50vh;
   position: relative;
-  background-color: #d7fad7;
+  background-color: #ffffff;
   text-align: center;
 }
 .top p {
@@ -163,6 +163,7 @@ nav .flex {
   .description .content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 }
 .description .img {
@@ -173,6 +174,7 @@ nav .flex {
 }
 .description .desc {
   line-height: 1.8;
+  text-align: left;
 }
 @media screen and (min-width: 768px) {
   .description .desc {
@@ -350,14 +352,22 @@ nav .flex {
   content: "redesign";
 }
 
+@media screen and (min-width: 768px) {
+  .contact .tab-flex {
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+}
+.contact .left {
+  font-size: 1.6rem;
+  line-height: 1.8;
+}
+
 form {
   margin: 0 auto;
   width: 100%;
-}
-@media screen and (min-width: 768px) {
-  form {
-    width: 60%;
-  }
 }
 
 input,
@@ -418,31 +428,10 @@ button {
   color: #fff;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
 }
-@media screen and (min-width: 768px) {
-  button {
-    margin-left: 65%;
-    width: 35%;
-  }
-}
 
 button:hover,
 .button:hover {
   background: #19a08c;
-}
-
-label.error {
-  font-family: 'Source Sans Pro', arial, sans-serif;
-  font-size: 1em;
-  display: block;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #d89c9c;
-  width: 80%;
-  margin: auto;
-  color: #FAFAFA;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
 }
 
 /* media queries */
@@ -455,10 +444,6 @@ label.error {
   display: none;
 }
 
-.thxMessage {
-  display: none;
-}
-
 .myform {
   display: none;
 }
@@ -467,27 +452,20 @@ label.error {
   color: red;
 }
 
-.dummy {
-  display: none;
-}
-
 .contact .thxMessage {
   display: none;
   text-align: center;
+  line-height: 1.8;
+  color: #777;
 }
 
-.contact .thxMessage p.special {
-  font-size: 2.2rem;
+.contact .thxMessage p {
+  font-size: 1.2rem;
   font-weight: 900;
   font-family: 'lato', sans-serif;
   letter-spacing: 0.05em;
-  color: #bde1da;
-  text-shadow: 0 0 1px #000;
-}
-
-.thxMessage {
-  line-height: 1.8;
-  color: #777;
+  color: #333;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 footer {
@@ -496,13 +474,12 @@ footer {
   color: #fff;
 }
 footer #topBtn {
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  right: 0;
-  width: 70px;
-  height: 70px;
-  padding: 10px;
-  background-color: #333;
+  right: 10px;
+}
+footer #topBtn:hover {
+  cursor: pointer;
 }
 footer .lower {
   padding: 10px 0;
