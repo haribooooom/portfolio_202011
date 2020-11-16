@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="https://sdk.form.run/js/v2/formrun.js"></script>
   <link rel="icon" type="image/x-icon" href="img/logo.png">
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/style.css">
@@ -126,8 +127,7 @@
               <p>カードを選択すると、<br>ポップアップで作品の説明が出でます。</p>
               <p>PDFのポートフォリオも作成したので、<br>よろしければご覧ください。</p>
             </div>
-            <div class="postit center">
-              <p>Portfolio</p>
+            <div class="postit center"><a href="#">Portfolio</a>
             </div>
             <div class="items">
               <div class="item">
@@ -172,7 +172,9 @@
               <div class="right">
                 <form id="form" action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSf2k-yKUk7TTkkH33WYzRMVt8C90Y29JH25d0JCIhJUGxEZ8Q/formResponse" method="post" target="dummyIframe">
                   <div class="wrap">
-                   <div class="mb40"><p>右上の米印(<span></span>)の項目は必須項目です。</p></div>
+                    <div class="mb40">
+                      <p>右上の米印(<span></span>)の項目は必須項目です。</p>
+                    </div>
                     <p class="title"><i class="fa fa-name" aria-hidden="true"></i>お名前<span></span></p>
                     <p class="box"><input id="name" name="entry.1645516517" type="text" placeholder="お名前を入力してください" required></p>
 
@@ -193,7 +195,7 @@
                 </form>
               </div>
               <div class="left">
-                <div class="tcenter mb80 big">Thank you for visiting my website!
+                <div class="tcenter mb50 big">Thank you for visiting my website!
                   <br>
                   How was it?
                   <br>
@@ -205,12 +207,15 @@
             <iframe name="dummyIframe" class="dummy">
             </iframe>
             <div class="thxMessage">
-              <img src="img/hedgehog01.png" alt="">
               <p>お問い合わせは無事送信されました。</p>
-              <p>後日担当のものより改めて確認のメールを送信させていただきます。</p>
-              <p><a href="#">ホームへ戻る</a></p>
             </div>
             <!--thxMessage-->
+<script src="https://sdk.form.run/js/v2/embed.js"></script>
+<div
+  class="formrun-embed"
+  data-formrun-form="@haribooooom-1605510297"
+  data-formrun-redirect="true">
+</div>
 
 
           </div>
@@ -226,84 +231,11 @@
         </div>
       </footer>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-    <script>
-      $(function() {
-        $('#topBtn').on('click', function() {
-          $('html,body').animate({
-            scrollTop: 0
-          }, 500);
-          return false;
-        });
-      });
-      $(window).on('load resize', function() {
-        var pos01 = 0;
-        var pos02 = $("#about").offset().top - 130;
-        var pos03 = $("#skill").offset().top - 130;
-        var pos04 = $("#works").offset().top - 130;
-        var pos05 = $("#contact").offset().top - 130;
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script src="js/main.js">
+  </script>
 
-        console.log(pos03);
-        $(window).on('load resize scroll', function() {
-          var posScroll = $(window).scrollTop();
-          if (pos01 <= posScroll && posScroll < pos02) {
-            $("#list01").addClass('current').siblings('li').removeClass('current');
-          } else if (pos02 <= posScroll && posScroll < pos03) {
-            $("#list02").addClass('current').siblings('li').removeClass('current');
-          } else if (pos03 <= posScroll && posScroll < pos04) {
-            $("#list03").addClass('current').siblings('li').removeClass('current');
-          } else if (pos04 <= posScroll && posScroll < pos05) {
-            $("#list04").addClass('current').siblings('li').removeClass('current');
-          } else if (pos05 <= posScroll) {
-            $("#list05").addClass('current').siblings('li').removeClass('current');
-          }
-        });
-
-      });
-
-      $(function() {
-        $("#submit-btn").on('click', function() {
-
-          //        名前とメールは必須
-          var name = $('#name').val();
-          var mail = $('#mail').val();
-          var textArea = $('#textArea').val();
-
-          if (name === "" || mail === "" || textArea === "") {
-            if (name === "") {
-              $('#name').val('名前入力は必須です').addClass('errorText');
-            }
-
-            if (mail === "") {
-              $('#mail').val('メールアドレス入力は必須です').addClass('errorText');
-            }
-            if (textArea === "") {
-              $('#textArea').val('お問い合わせ入力は必須です').addClass('errorText');
-            }
-            return false;
-          }
-
-          //        メールアドレスが正しいか確認する
-          var regex = new RegExp(/^([a-z0-9A-Z])+([a-z0-9A-Z-_\.])*@([a-z0-9A-Z-_])+([a-z0-9A-Z\.-_])*$/);
-          var result = regex.test(mail);
-          if (result === false) {
-            $('#mail').val('メールアドレスの形式が違います').addClass('.errorText');
-          }
-
-          $('#form').addClass('myform');
-          $('.thxMessage').show();
-        });
-        $('input').on('focus', function() {
-          $(this).removeClass('errorText').val('');
-        });
-
-
-
-      });
-    </script>
-
-    <script src="js/main.js">
-    </script>
 </body></html>

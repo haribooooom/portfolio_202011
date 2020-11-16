@@ -10,7 +10,7 @@ $shadow:0px 1px 2px rgba(0, 0, 0, 0.2);
 $border:1px solid #aaa;
 
 body {
-  background-color: #F8F6E7;
+  background-color: #fff;
   color: #222;
 }
 
@@ -40,10 +40,6 @@ body {
   @include mq-tablet {
     max-width: 980px;
   }
-}
-
-main > div:nth-of-type(2n) {
-  background-color: #fff;
 }
 
 //font
@@ -101,20 +97,6 @@ label {
   }
 }
 
-.more a {
-  width: 200px;
-  padding: 10px;
-  display: block;
-  text-align: center;
-  font-size: 1.8rem;
-  color: #fff;
-  background-color: $bl;
-
-  &:hover {
-    opacity: 0.8;
-  }
-}
-
 header {
   width: 100%;
   height: 80px;
@@ -140,16 +122,46 @@ nav {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
 
-  //  background-color:red;
+  li {
+    a {
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    a::after {
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 2px;
+      background: #333;
+      transform: scale(0, 1);
+      transform-origin: left top;
+      transition: transform .3s;
+    }
+
+    a:hover::after {
+      transform: scale(1, 1);
+    }
+  }
+
   .flex {
     justify-content: space-around;
+  }
+
+  .current {
+    a {
+      color: #fafafa;
+      font-weight: 600;
+    }
   }
 }
 
 .top {
   padding-top: 125px;
-  height: 50vh;
-  position: relative;
+  height: 80vh;
   background-color: #ffffff;
   text-align: center;
 
@@ -158,17 +170,15 @@ nav {
     line-height: 2.4rem;
   }
 
-  img.hedgehog {
-    bottom: 40px;
-    right: 25px;
-    position: absolute;
-    width: 90px;
-  }
 }
 
 //about
 .description {
+  background-color: #F8F6E7;
+
   .content {
+    padding: 60px 0;
+
     @include mq-tablet {
       display: flex;
       justify-content: space-between;
@@ -230,7 +240,7 @@ nav {
     margin-bottom: 20px;
     align-items: center;
     background: #fafafa;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: $shadow;
 
     img {
       width: 70px;
@@ -247,7 +257,11 @@ nav {
   }
 }
 
+
+//gallery
 .gallery {
+  background-color: #F8F6E7;
+
   .inner {
     @include mq-tablet {
       padding: 40px 60px 110px;
@@ -262,27 +276,28 @@ nav {
 
   .postit {
     margin-bottom: 70px;
-    padding: 10px;
-    max-width: 200px;
-    position: relative;
-    text-align: center;
-    background: #fafafa;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
 
-    p {
+    a {
+      box-shadow: $shadow;
+      position: relative;
+      text-align: center;
+      width: 200px;
+      padding: 12px 20px;
+      background: #fafafa;
+      line-height: 2;
       font-size: 2rem;
       font-weight: 600;
       font-family: ubuntu;
-    }
 
-    &::after {
-      content: '';
-      position: absolute;
-      border-style: solid;
-      bottom: 0;
-      right: 0;
-      border-width: 0 0 15px 15px;
-      border-color: transparent transparent #E4011E transparent;
+      &::after {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        bottom: 0;
+        right: 0;
+        border-width: 0 0 15px 15px;
+        border-color: transparent transparent #E4011E transparent;
+      }
     }
   }
 
@@ -325,6 +340,163 @@ nav {
     p {
       line-height: 1.4;
     }
+  }
+}
+
+
+
+
+//contact
+.contact {
+  @include mq-tablet {
+    .tab-flex {
+      width: 100%;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row-reverse;
+    }
+  }
+
+  .left {
+    font-size: 1.6rem;
+    line-height: 1.8;
+  }
+
+  .title {
+    text-align: left;
+  }
+
+  i::before {
+    margin: 0 0.5rem;
+  }
+
+  .fa-name::before {
+    content: "\f007";
+  }
+
+  .fa-mail::before {
+    content: "\f0e0";
+  }
+
+  .fa-affiliation::before {
+    content: "\f1ad";
+  }
+
+  .fa-message::before {
+    content: "\f075";
+  }
+
+  .fa-send::before {
+    content: "\f1d8";
+  }
+
+  span:after {
+    content: "*";
+    margin-left: 0.5rem;
+    color: red;
+  }
+}
+
+form {
+  margin: 0 auto;
+  width: 100%;
+}
+
+input,
+textarea {
+  margin-bottom: 16px;
+  margin-top: 6px;
+  font-size: 1em;
+  padding: 15px 10px 10px;
+  font-family: 'Source Sans Pro', arial, sans-serif;
+  border: 1px solid #cecece;
+  background: #f7f7f7;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #eaeaea;
+  box-shadow: $shadow;
+}
+
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {
+  color: #c3c3c3;
+}
+
+
+button {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  background-color: #E83418;
+  padding: 12px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #E83418;
+  -webkit-transition: .5s;
+  transition: .5s;
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 60%;
+  width: 40%;
+  color: #fff;
+  box-shadow: $shadow;
+
+}
+
+button:hover,
+.button:hover {
+  background: rgba(232, 52, 24, 0.8);
+}
+
+.dummy {
+  display: none;
+}
+
+.myform {
+  display: none;
+}
+
+.errorText {
+  color: red;
+}
+
+.contact .thxMessage {
+  display: none;
+
+p {
+  font-size: 1.2rem;
+//  font-weight: 900;
+}
+}
+
+footer {
+  position: relative;
+  background-color: $bl;
+  color: #fff;
+
+  #topBtn {
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .lower {
+    padding: 10px 0;
   }
 }
 
@@ -390,188 +562,5 @@ nav {
 
   &::before {
     content: "redesign";
-  }
-}
-
-
-//contact
-.contact {
-  @include mq-tablet {
-    .tab-flex {
-      width: 100%;
-      justify-content: space-around;
-      align-items: center;
-      flex-direction: row-reverse;
-    }
-  }
-
-  .left {
-    font-size: 1.6rem;
-    line-height: 1.8;
-  }
-
-  .title {
-    text-align: left;
-  }
-
-  i::before {
-    margin:0 0.5rem;
-  }
-
-  .fa-name::before {
-    content: "\f007";
-  }
-
-  .fa-mail::before {
-    content: "\f0e0";
-  }
-  .fa-affiliation::before {
-    content: "\f1ad";
-  }
-
-  .fa-message::before {
-    content: "\f075";
-  }
-  .fa-send::before {
-    content: "\f1d8";
-  }
-  span:after{
-    content: "*";
-    margin-left: 0.5rem;
-    color: red;
-  }
-}
-
-form {
-  margin: 0 auto;
-  width: 100%;
-
-  @include mq-tablet {
-    //    width: 60%;
-  }
-}
-
-input,
-textarea {
-  margin-bottom: 16px;
-  margin-top: 6px;
-  font-size: 1em;
-  padding: 15px 10px 10px;
-  font-family: 'Source Sans Pro', arial, sans-serif;
-  border: 1px solid #cecece;
-  background: #f7f7f7;
-  //  color: #FAFAFA;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  //  max-width: 600px;
-  border-radius: 3px;
-  border: 1px solid #eaeaea;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-::-webkit-input-placeholder {
-  color: #FAFAFA;
-}
-
-:-moz-placeholder {
-  color: #c3c3c3;
-}
-
-::-moz-placeholder {
-  color: #c3c3c3;
-
-}
-
-:-ms-input-placeholder {
-  color: #c3c3c3;
-
-}
-
-button {
-  margin-top: 15px;
-  margin-bottom: 25px;
-  background-color: #2ABCA7;
-  padding: 12px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  border: 1px solid #2ABCA7;
-  -webkit-transition: .5s;
-  transition: .5s;
-  display: inline-block;
-  cursor: pointer;
-  margin-left: 60%;
-  width: 40%;
-  color: #fff;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-
-}
-
-button:hover,
-.button:hover {
-  background: #19a08c;
-}
-
-
-/* media queries */
-@media (max-width: 700px) {
-  label.error {
-    width: 90%;
-  }
-}
-
-.dummy {
-  display: none;
-}
-
-.myform {
-  display: none;
-}
-
-.errorText {
-  color: red;
-}
-
-.contact .thxMessage {
-  display: none;
-  text-align: center;
-  line-height: 1.8;
-  color: #777
-}
-
-.contact .thxMessage p {
-  font-size: 1.2rem;
-  font-weight: 900;
-  font-family: 'lato', sans-serif;
-  letter-spacing: 0.05em;
-  color: $bl;
-  text-shadow: $shadow;
-}
-
-footer {
-  position: relative;
-  background-color: $bl;
-  color: #fff;
-
-  #topBtn {
-    position: fixed;
-    bottom: 0;
-    right: 10px;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
-  .lower {
-    padding: 10px 0;
   }
 }

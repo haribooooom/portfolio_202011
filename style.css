@@ -1,5 +1,5 @@
 body {
-  background-color: #F8F6E7;
+  background-color: #fff;
   color: #222;
 }
 
@@ -43,10 +43,6 @@ body {
   .inner {
     max-width: 980px;
   }
-}
-
-main > div:nth-of-type(2n) {
-  background-color: #fff;
 }
 
 h1,
@@ -100,19 +96,6 @@ label {
     display: flex;
   }
 }
-.more a {
-  width: 200px;
-  padding: 10px;
-  display: block;
-  text-align: center;
-  font-size: 1.8rem;
-  color: #fff;
-  background-color: #333;
-}
-.more a:hover {
-  opacity: 0.8;
-}
-
 header {
   width: 100%;
   height: 80px;
@@ -137,14 +120,37 @@ nav {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
 }
+nav li a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+nav li a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #333;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform .3s;
+}
+nav li a:hover::after {
+  transform: scale(1, 1);
+}
 nav .flex {
   justify-content: space-around;
+}
+nav .current a {
+  color: #fafafa;
+  font-weight: 600;
 }
 
 .top {
   padding-top: 125px;
-  height: 50vh;
-  position: relative;
+  height: 80vh;
   background-color: #ffffff;
   text-align: center;
 }
@@ -152,13 +158,13 @@ nav .flex {
   font-size: 1.4rem;
   line-height: 2.4rem;
 }
-.top img.hedgehog {
-  bottom: 40px;
-  right: 25px;
-  position: absolute;
-  width: 90px;
-}
 
+.description {
+  background-color: #F8F6E7;
+}
+.description .content {
+  padding: 60px 0;
+}
 @media screen and (min-width: 768px) {
   .description .content {
     display: flex;
@@ -226,6 +232,9 @@ nav .flex {
   line-height: 1.2;
 }
 
+.gallery {
+  background-color: #F8F6E7;
+}
 @media screen and (min-width: 768px) {
   .gallery .inner {
     padding: 40px 60px 110px;
@@ -237,19 +246,20 @@ nav .flex {
 }
 .gallery .postit {
   margin-bottom: 70px;
-  padding: 10px;
-  max-width: 200px;
+}
+.gallery .postit a {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
   position: relative;
   text-align: center;
+  width: 200px;
+  padding: 12px 20px;
   background: #fafafa;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-}
-.gallery .postit p {
+  line-height: 2;
   font-size: 2rem;
   font-weight: 600;
   font-family: ubuntu;
 }
-.gallery .postit::after {
+.gallery .postit a::after {
   content: '';
   position: absolute;
   border-style: solid;
@@ -292,64 +302,6 @@ nav .flex {
 }
 .gallery .item p {
   line-height: 1.4;
-}
-
-.bntop {
-  padding-top: 150px;
-  line-height: 1.4;
-  position: relative;
-}
-.bntop img {
-  position: absolute;
-  right: 10px;
-  bottom: 0;
-  width: 150px;
-}
-
-.portfolio-site {
-  max-width: 220px;
-  padding: 10px;
-  background-color: #E83418;
-  border-radius: 4px;
-  margin-bottom: 80px;
-}
-.portfolio-site p {
-  color: #fff;
-  font-weight: 600;
-}
-
-.tag > div {
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  border-radius: 6px;
-}
-.tag > div::before {
-  color: #fff;
-  font-size: 1.6rem;
-  font-weight: 600;
-}
-
-.s300 {
-  background: #28a838;
-}
-.s300::before {
-  content: "300x250";
-}
-
-.trace {
-  margin-left: 20px;
-  background: #fabd00;
-}
-.trace::before {
-  content: "Trace";
-}
-
-.redesign {
-  margin-left: 20px;
-  background: #dc097b;
-}
-.redesign::before {
-  content: "redesign";
 }
 
 @media screen and (min-width: 768px) {
@@ -420,31 +372,22 @@ textarea {
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-::-webkit-input-placeholder {
-  color: #FAFAFA;
-}
-
-:-moz-placeholder {
-  color: #c3c3c3;
-}
-
-::-moz-placeholder {
-  color: #c3c3c3;
-}
-
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
 :-ms-input-placeholder {
   color: #c3c3c3;
 }
 
 button {
-  margin-top: 15px;
-  margin-bottom: 25px;
-  background-color: #2ABCA7;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  background-color: #E83418;
   padding: 12px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
-  border: 1px solid #2ABCA7;
+  border: 1px solid #E83418;
   -webkit-transition: .5s;
   transition: .5s;
   display: inline-block;
@@ -457,15 +400,9 @@ button {
 
 button:hover,
 .button:hover {
-  background: #19a08c;
+  background: rgba(232, 52, 24, 0.8);
 }
 
-/* media queries */
-@media (max-width: 700px) {
-  label.error {
-    width: 90%;
-  }
-}
 .dummy {
   display: none;
 }
@@ -480,18 +417,9 @@ button:hover,
 
 .contact .thxMessage {
   display: none;
-  text-align: center;
-  line-height: 1.8;
-  color: #777;
 }
-
 .contact .thxMessage p {
   font-size: 1.2rem;
-  font-weight: 900;
-  font-family: 'lato', sans-serif;
-  letter-spacing: 0.05em;
-  color: #333;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 footer {
@@ -509,6 +437,64 @@ footer #topBtn:hover {
 }
 footer .lower {
   padding: 10px 0;
+}
+
+.bntop {
+  padding-top: 150px;
+  line-height: 1.4;
+  position: relative;
+}
+.bntop img {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  width: 150px;
+}
+
+.portfolio-site {
+  max-width: 220px;
+  padding: 10px;
+  background-color: #E83418;
+  border-radius: 4px;
+  margin-bottom: 80px;
+}
+.portfolio-site p {
+  color: #fff;
+  font-weight: 600;
+}
+
+.tag > div {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 6px;
+}
+.tag > div::before {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.s300 {
+  background: #28a838;
+}
+.s300::before {
+  content: "300x250";
+}
+
+.trace {
+  margin-left: 20px;
+  background: #fabd00;
+}
+.trace::before {
+  content: "Trace";
+}
+
+.redesign {
+  margin-left: 20px;
+  background: #dc097b;
+}
+.redesign::before {
+  content: "redesign";
 }
 
 /*# sourceMappingURL=style.css.map */
