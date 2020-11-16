@@ -34,7 +34,12 @@ body {
 }
 
 .inner {
+  margin: 0 auto;
   padding: 40px 15px;
+
+  @include mq-tablet {
+    max-width: 980px;
+  }
 }
 
 main > div:nth-of-type(2n) {
@@ -143,7 +148,7 @@ nav {
 
 .top {
   padding-top: 165px;
-  height: 85vh;
+  height: 80vh;
   position: relative;
   background-color: #d7fad7;
   text-align: center;
@@ -163,8 +168,11 @@ nav {
 
 //about
 .description {
-  .inner {
-    margin: 0 auto;
+  .content {
+    @include mq-tablet {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   .img {
@@ -177,6 +185,10 @@ nav {
   .desc {
     line-height: 1.8;
 
+    @include mq-tablet {
+      width: 50%;
+    }
+
     .name {
       font-weight: 600;
       font-size: 2.4rem;
@@ -188,7 +200,7 @@ nav {
     }
 
     i::before {
-      margin-right: 1rem;
+      margin-right: 0.2rem;
       content: "\f004";
       color: #E83418;
     }
@@ -197,15 +209,26 @@ nav {
 
 //skill
 .skill {
-  .items {}
+  .items {
+    @include mq-tablet {
+      margin: 0 auto;
+      max-width: 720px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
 
   .item {
+    margin: 0 auto;
+    max-width: 340px;
+    width: 100%;
     height: 100px;
     padding: 12px;
+    margin-bottom: 20px;
     align-items: center;
     background: #fafafa;
-    box-shadow: $shadow;
-
+   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
     img {
       width: 70px;
       margin-right: 30px;
@@ -241,7 +264,7 @@ nav {
     position: relative;
     text-align: center;
     background: #fafafa;
-    box-shadow: $shadow;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
 
     p {
       font-size: 2rem;
@@ -261,10 +284,10 @@ nav {
   }
 
   .items {
-      @include mq-tablet {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+    @include mq-tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
   }
 
@@ -352,6 +375,7 @@ nav {
 .trace {
   margin-left: 20px;
   background: #fabd00;
+
   &::before {
     content: "Trace";
   }
@@ -360,10 +384,160 @@ nav {
 .redesign {
   margin-left: 20px;
   background: #dc097b;
+
   &::before {
     content: "redesign";
   }
 }
+
+
+//contact
+.contact {}
+
+form {
+  margin: 0 auto;
+  width: 100%;
+
+  @include mq-tablet {
+    width: 60%;
+  }
+}
+
+input,
+textarea {
+  margin-bottom: 16px;
+  margin-top: 6px;
+  font-size: 1em;
+  padding: 15px 10px 10px;
+  font-family: 'Source Sans Pro', arial, sans-serif;
+  border: 1px solid #cecece;
+  background: #f7f7f7;
+  //  color: #FAFAFA;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  //  max-width: 600px;
+  border-radius: 3px;
+  border: 1px solid #eaeaea;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-input-placeholder {
+  color: #FAFAFA;
+}
+
+:-moz-placeholder {
+  color: #c3c3c3;
+}
+
+::-moz-placeholder {
+  color: #c3c3c3;
+
+}
+
+:-ms-input-placeholder {
+  color: #c3c3c3;
+
+}
+
+button {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  background-color: #2ABCA7;
+  padding: 12px 45px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #2ABCA7;
+  -webkit-transition: .5s;
+  transition: .5s;
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 50%;
+  width: 50%;
+  color: #fff;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+
+  @include mq-tablet {
+    margin-left: 65%;
+    width: 35%;
+  }
+}
+
+button:hover,
+.button:hover {
+  background: #19a08c;
+}
+
+label.error {
+  font-family: 'Source Sans Pro', arial, sans-serif;
+  font-size: 1em;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #d89c9c;
+  width: 80%;
+  margin: auto;
+  color: #FAFAFA;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+/* media queries */
+@media (max-width: 700px) {
+  label.error {
+    width: 90%;
+  }
+}
+
+.dummy {
+  display: none;
+}
+
+.thxMessage {
+  display: none;
+}
+
+.myform {
+  display: none;
+}
+
+.errorText {
+  color: red;
+}
+
+
+.dummy {
+  display: none
+}
+
+.contact .thxMessage {
+  display: none;
+  text-align: center
+}
+
+.contact .thxMessage p.special {
+  font-size: 2.2rem;
+  font-weight: 900;
+  font-family: 'lato', sans-serif;
+  letter-spacing: 0.05em;
+  color: #bde1da;
+  text-shadow: 0 0 1px #000
+}
+
+.thxMessage {
+  line-height: 1.8;
+  color: #777
+}
+
 
 footer {
   position: relative;
