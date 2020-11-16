@@ -146,6 +146,84 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script>
+    $(function() {
+      $('#topBtn').on('click', function() {
+        $('html,body').animate({
+          scrollTop: 0
+        }, 500);
+        return false;
+      });
+    });
+    $(window).on('load resize', function() {
+      var pos01 = 0;
+      var pos02 = $("#about").offset().top - 130;
+      var pos03 = $("#skill").offset().top - 130;
+      var pos04 = $("#works").offset().top - 130;
+      var pos05 = $("#contact").offset().top - 130;
+
+      console.log(pos03);
+      $(window).on('load resize scroll', function() {
+        var posScroll = $(window).scrollTop();
+        if (pos01 <= posScroll && posScroll < pos02) {
+          $("#list01").addClass('current').siblings('li').removeClass('current');
+        } else if (pos02 <= posScroll && posScroll < pos03) {
+          $("#list02").addClass('current').siblings('li').removeClass('current');
+        } else if (pos03 <= posScroll && posScroll < pos04) {
+          $("#list03").addClass('current').siblings('li').removeClass('current');
+        } else if (pos04 <= posScroll && posScroll < pos05) {
+          $("#list04").addClass('current').siblings('li').removeClass('current');
+        } else if (pos05 <= posScroll) {
+          $("#list05").addClass('current').siblings('li').removeClass('current');
+        }
+      });
+
+    });
+
+    $(function() {
+      $("#submit-btn").on('click', function() {
+
+        //        名前とメールは必須
+        var name = $('#name').val();
+        var mail = $('#mail').val();
+        var textArea = $('#textArea').val();
+
+        if (name === "" || mail === "" || textArea === "") {
+          if (name === "") {
+            $('#name').val('名前入力は必須です').addClass('errorText');
+          }
+
+          if (mail === "") {
+            $('#mail').val('メールアドレス入力は必須です').addClass('errorText');
+          }
+          if (textArea === "") {
+            $('#textArea').val('お問い合わせ入力は必須です').addClass('errorText');
+          }
+          return false;
+        }
+
+        //        メールアドレスが正しいか確認する
+        var regex = new RegExp(/^([a-z0-9A-Z])+([a-z0-9A-Z-_\.])*@([a-z0-9A-Z-_])+([a-z0-9A-Z\.-_])*$/);
+        var result = regex.test(mail);
+        if (result === false) {
+          $('#mail').val('メールアドレスの形式が違います').addClass('.errorText');
+        }
+
+        $('#form').addClass('myform');
+        $('.thxMessage').show();
+      });
+      $('input').on('focus', function() {
+        $(this).removeClass('errorText').val('');
+      });
+
+
+
+    });
+
+  </script>
+
   <script src="js/main.js">
   </script>
-</body></html>
+</body>
+
+</html>
