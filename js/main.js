@@ -100,7 +100,6 @@
 
       //        メールアドレスが正しいか確認する
       var regex = new RegExp(/^([a-z0-9A-Z])+([a-z0-9A-Z-_\.])*@([a-z0-9A-Z-_])+([a-z0-9A-Z\.-_])*$/);
-      //        var regex = new RegExp(/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/);
       var result = regex.test(mail);
       if (result === false) {
         $('#mail').val('メールアドレスの形式が違います').addClass('.errorText');
@@ -117,6 +116,8 @@
       $(this).removeClass('errorText').val('');
     });
 
-
+    $("#submit").on("click", function () {
+      $(".thxmes").text("Failed to send a message. Please try again.");
+    });
 
   });

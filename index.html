@@ -197,14 +197,14 @@
                       <p class="">また、メール送信後は確認メールが届きます。メッセージは確認次第、お返事いたしますので今しばらくお待ちください。</p>
                     </div>
                     <p class="title"><i class="fa fa-name" aria-hidden="true"></i>お名前<span></span></p>
-                    <input name="お名前" type="text">
+                    <input id="name" name="お名前" type="text">
 
                     <p class="title"><i class="fa fa-mail" aria-hidden="true"></i>
                       メールアドレス<span></span></p>
-                    <input name="メールアドレス" type="text" data-formrun-type="email" data-formrun-required>
+                    <input id="mail" name="メールアドレス" type="text" data-formrun-type="email" data-formrun-required>
 
                     <p class="title"><i class="fa fa-message" aria-hidden="true"></i>メッセージ<span></span></p>
-                    <textarea name="お問い合わせ" data-formrun-required></textarea>
+                    <textarea id="textArea" name="お問い合わせ" data-formrun-required></textarea>
 
                     <!-- ボット投稿をブロックするためのタグ -->
                     <div class="_formrun_gotcha">
@@ -262,9 +262,7 @@
   <script src="js/main.js">
   </script>
   <script>
-    $("#submit").on("click", function() {
-      $(".thxmes").text("Failed to send a message. Please try again.");
-    });
+
   </script>
 
 </body></html>

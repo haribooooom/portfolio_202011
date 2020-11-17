@@ -289,32 +289,37 @@ nav {
 }
 
 
-  .postit {
-    margin-bottom: 70px;
+.postit {
+  margin-bottom: 70px;
 
-    a {
-      box-shadow: $shadow;
-      position: relative;
-      text-align: center;
-      width: 200px;
-      padding: 12px 20px;
-      background: #fafafa;
-      line-height: 2;
-      font-size: 2rem;
-      font-weight: 600;
-      font-family: ubuntu;
+  a {
+    box-shadow: $shadow;
+    position: relative;
+    text-align: center;
+    width: 200px;
+    padding: 12px 20px;
+    background: #fafafa;
+    line-height: 2;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: ubuntu;
+      transition: 0.5s;
 
-      &::after {
-        content: '';
-        position: absolute;
-        border-style: solid;
-        bottom: 0;
-        right: 0;
-        border-width: 0 0 15px 15px;
-        border-color: transparent transparent $acs transparent;
-      }
+    &::after {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      bottom: 0;
+      right: 0;
+      border-width: 0 0 15px 15px;
+      border-color: transparent transparent $acs transparent;
+    }
+    &:hover{
+      opacity: 0.8;
+      transition: 0.5s;
     }
   }
+}
 
 //gallery
 .gallery {
@@ -638,17 +643,34 @@ footer {
 }
 
 .portfolio-site {
-  padding:30px 10px;
+  padding: 30px 10px;
 
-button{
-  width: 100%;
-  border-radius: 4px;
-  @include mq-tablet {
-}
-  p {
-    color: $wh;
-    font-weight: 600;
+  button {
+    width: 100%;
+    border-radius: 4px;
+
+    @include mq-tablet {}
+
+    p {
+      color: $wh;
+      font-weight: 600;
+    }
   }
+
 }
 
+.thxmes {
+  padding-top: 160px;
+  line-height: 1.6;
+img {
+  margin-top: 50px;
+}
+}
+
+.go-home a {
+  text-decoration: underline;
+
+  &:hover {
+    color: $acs;
+  }
 }

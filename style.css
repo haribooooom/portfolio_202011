@@ -271,6 +271,7 @@ nav .current a {
   font-size: 2rem;
   font-weight: 600;
   font-family: ubuntu;
+  transition: 0.5s;
 }
 .postit a::after {
   content: '';
@@ -280,6 +281,10 @@ nav .current a {
   right: 0;
   border-width: 0 0 15px 15px;
   border-color: transparent transparent #E83418 transparent;
+}
+.postit a:hover {
+  opacity: 0.8;
+  transition: 0.5s;
 }
 
 .gallery {
@@ -572,6 +577,21 @@ footer .lower {
 .portfolio-site button p {
   color: #fff;
   font-weight: 600;
+}
+
+.thxmes {
+  padding-top: 160px;
+  line-height: 1.6;
+}
+.thxmes img {
+  margin-top: 50px;
+}
+
+.go-home a {
+  text-decoration: underline;
+}
+.go-home a:hover {
+  color: #E83418;
 }
 
 /*# sourceMappingURL=style.css.map */
