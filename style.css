@@ -248,6 +248,7 @@ nav .current a {
 }
 .skill .item img {
   width: 70px;
+  height: 70px;
   margin-right: 30px;
 }
 .skill .item h3 {
@@ -306,6 +307,9 @@ nav .current a {
     justify-content: space-between;
   }
 }
+.gallery .items .txt {
+  margin-top: 8px;
+}
 .gallery .item {
   margin-bottom: 20px;
   padding: 30px 16px 20px;
@@ -325,7 +329,7 @@ nav .current a {
 }
 .gallery .item img {
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 .gallery .item h3 {
   text-align: center;
