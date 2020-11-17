@@ -257,22 +257,10 @@ nav .current a {
   line-height: 1.2;
 }
 
-.gallery {
-  background-color: #F8F6E7;
-}
-@media screen and (min-width: 768px) {
-  .gallery .inner {
-    padding: 40px 60px 110px;
-  }
-}
-.gallery .top-desc p {
-  line-height: 1.6;
-  margin-bottom: 8px;
-}
-.gallery .postit {
+.postit {
   margin-bottom: 70px;
 }
-.gallery .postit a {
+.postit a {
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
   position: relative;
   text-align: center;
@@ -284,7 +272,7 @@ nav .current a {
   font-weight: 600;
   font-family: ubuntu;
 }
-.gallery .postit a::after {
+.postit a::after {
   content: '';
   position: absolute;
   border-style: solid;
@@ -292,6 +280,19 @@ nav .current a {
   right: 0;
   border-width: 0 0 15px 15px;
   border-color: transparent transparent #E83418 transparent;
+}
+
+.gallery {
+  background-color: #F8F6E7;
+}
+@media screen and (min-width: 768px) {
+  .gallery .inner {
+    padding: 40px 60px 110px;
+  }
+}
+.gallery .top-desc p {
+  line-height: 1.6;
+  margin-bottom: 8px;
 }
 @media screen and (min-width: 768px) {
   .gallery .items {
@@ -434,8 +435,8 @@ button {
   cursor: pointer;
   color: #fff;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-  margin-left: 50%;
-  width: 50%;
+  margin-left: 65%;
+  width: 35%;
 }
 @media screen and (min-width: 768px) {
   button {
@@ -488,7 +489,6 @@ footer .lower {
 
 .banner .bn-decs .flex {
   margin-left: 1rem;
-  /*      flex-direction: column;*/
   align-items: center;
 }
 .banner i::before {
@@ -563,13 +563,13 @@ footer .lower {
 }
 
 .portfolio-site {
-  max-width: 220px;
-  padding: 10px;
-  background-color: #E83418;
-  border-radius: 4px;
-  margin-bottom: 80px;
+  padding: 30px 10px;
 }
-.portfolio-site p {
+.portfolio-site button {
+  width: 100%;
+  border-radius: 4px;
+}
+.portfolio-site button p {
   color: #fff;
   font-weight: 600;
 }

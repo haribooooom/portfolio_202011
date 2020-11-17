@@ -201,11 +201,13 @@ nav {
 //about
 .description {
   background-color: #F8F6E7;
-  .inner{
-      @include mq-tablet {
-            max-width: 980px;
+
+  .inner {
+    @include mq-tablet {
+      max-width: 980px;
     }
   }
+
   .content {
 
     @include mq-tablet {
@@ -287,22 +289,6 @@ nav {
 }
 
 
-//gallery
-.gallery {
-  background-color: #F8F6E7;
-
-  .inner {
-    @include mq-tablet {
-      padding: 40px 60px 110px;
-    }
-  }
-
-  .top-desc p {
-    line-height: 1.6;
-    margin-bottom: 8px;
-  }
-
-
   .postit {
     margin-bottom: 70px;
 
@@ -328,6 +314,21 @@ nav {
         border-color: transparent transparent $acs transparent;
       }
     }
+  }
+
+//gallery
+.gallery {
+  background-color: #F8F6E7;
+
+  .inner {
+    @include mq-tablet {
+      padding: 40px 60px 110px;
+    }
+  }
+
+  .top-desc p {
+    line-height: 1.6;
+    margin-bottom: 8px;
   }
 
   .items {
@@ -493,11 +494,11 @@ button {
   cursor: pointer;
   color: $wh;
   box-shadow: $shadow;
-  margin-left: 50%;
-  width: 50%;
+  margin-left: 65%;
+  width: 35%;
 
   @include mq-tablet {
-    margin-left:70%;
+    margin-left: 70%;
     width: 30%;
     letter-spacing: 0.5rem;
   }
@@ -553,7 +554,6 @@ footer {
 
   .bn-decs .flex {
     margin-left: 1rem;
-    /*      flex-direction: column;*/
     align-items: center;
   }
 
@@ -572,8 +572,9 @@ footer {
 
 .bn-inner {
   padding: 10px;
-    @include mq-tablet {
-  padding: 60px;
+
+  @include mq-tablet {
+    padding: 60px;
   }
 }
 
@@ -583,7 +584,7 @@ footer {
   position: relative;
 
   &.flex {
-align-items: center;
+    align-items: center;
     flex-direction: column;
   }
 
@@ -637,14 +638,17 @@ align-items: center;
 }
 
 .portfolio-site {
-  max-width: 220px;
-  padding: 10px;
-  background-color: $acs;
-  border-radius: 4px;
-  margin-bottom: 80px;
+  padding:30px 10px;
 
+button{
+  width: 100%;
+  border-radius: 4px;
+  @include mq-tablet {
+}
   p {
     color: $wh;
     font-weight: 600;
   }
+}
+
 }
