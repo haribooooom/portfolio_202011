@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
 body {
   background-color: #fff;
   color: #222;
@@ -42,7 +43,6 @@ body {
 @media screen and (min-width: 768px) {
   .inner {
     padding: 60px 0 80px;
-    max-width: 980px;
   }
 }
 
@@ -101,6 +101,19 @@ label {
     display: flex;
   }
 }
+/* js */
+.js-anime {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(40px);
+  transition: all 1s;
+}
+.js-anime.is-show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+
 header {
   width: 100%;
   height: 80px;
@@ -173,8 +186,10 @@ nav .current a {
 .description {
   background-color: #F8F6E7;
 }
-.description .content {
-  padding: 60px 0;
+@media screen and (min-width: 768px) {
+  .description .inner {
+    max-width: 980px;
+  }
 }
 @media screen and (min-width: 768px) {
   .description .content {
@@ -424,8 +439,8 @@ button {
 }
 @media screen and (min-width: 768px) {
   button {
-    margin-left: 60%;
-    width: 40%;
+    margin-left: 70%;
+    width: 30%;
     letter-spacing: 0.5rem;
   }
 }
@@ -471,36 +486,54 @@ footer .lower {
   padding: 10px 0;
 }
 
+.banner .bn-decs .flex {
+  margin-left: 1rem;
+  /*      flex-direction: column;*/
+  align-items: center;
+}
+.banner i::before {
+  margin-left: 1rem;
+  content: "\f08e ";
+  color: #fff;
+}
+@media screen and (min-width: 768px) {
+  .banner .item {
+    width: calc((100%/4) - 15px);
+  }
+}
+
+.bn-inner {
+  padding: 10px;
+}
+@media screen and (min-width: 768px) {
+  .bn-inner {
+    padding: 60px;
+  }
+}
+
 .bntop {
-  padding-top: 150px;
+  padding: 150px 10px 0;
   line-height: 1.4;
   position: relative;
 }
+.bntop.flex {
+  align-items: center;
+  flex-direction: column;
+}
 .bntop img {
-  position: absolute;
-  right: 10px;
-  bottom: 0;
   width: 150px;
 }
 
-.portfolio-site {
-  max-width: 220px;
-  padding: 10px;
-  background-color: #E83418;
-  border-radius: 4px;
-  margin-bottom: 80px;
-}
-.portfolio-site p {
-  color: #fff;
-  font-weight: 600;
-}
-
-.tag > div {
+.tag .s300,
+.tag .trace,
+.tag .redesign {
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
   padding: 10px;
   border-radius: 6px;
 }
-.tag > div::before {
+.tag .s300::before,
+.tag .trace::before,
+.tag .redesign::before {
   color: #fff;
   font-size: 1.6rem;
   font-weight: 600;
@@ -527,6 +560,18 @@ footer .lower {
 }
 .redesign::before {
   content: "redesign";
+}
+
+.portfolio-site {
+  max-width: 220px;
+  padding: 10px;
+  background-color: #E83418;
+  border-radius: 4px;
+  margin-bottom: 80px;
+}
+.portfolio-site p {
+  color: #fff;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */

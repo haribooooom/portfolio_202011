@@ -1,5 +1,7 @@
 @charset 'utf-8';
 
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
 $wh:#fff;
 $acs:#E83418;
 $bl:#333;
@@ -33,11 +35,13 @@ body {
 .inner {
   margin: 0 auto;
   padding: 40px 15px 60px;
+
   @include mq-tablet {
     padding: 60px 0 80px;
-    max-width: 980px;
   }
 }
+
+
 
 //font
 h1,
@@ -83,9 +87,11 @@ label {
 .tcenter {
   text-align: center;
 }
-.tleft{
+
+.tleft {
   text-align: left;
 }
+
 .flex {
   display: flex;
 }
@@ -95,6 +101,22 @@ label {
     display: flex;
   }
 }
+
+/* js */
+.js-anime {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(40px);
+  transition: all 1s;
+
+  &.is-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
+}
+
+
 
 header {
   width: 100%;
@@ -127,8 +149,9 @@ nav {
       position: relative;
       display: inline-block;
       text-decoration: none;
-        @include mq-tablet {
-          font-size:2rem;
+
+      @include mq-tablet {
+        font-size: 2rem;
       }
     }
 
@@ -178,9 +201,12 @@ nav {
 //about
 .description {
   background-color: #F8F6E7;
-
+  .inner{
+      @include mq-tablet {
+            max-width: 980px;
+    }
+  }
   .content {
-    padding: 60px 0;
 
     @include mq-tablet {
       display: flex;
@@ -198,7 +224,7 @@ nav {
 
   .desc {
     line-height: 1.8;
-//    text-align: left;
+    //    text-align: left;
 
     @include mq-tablet {
       width: 50%;
@@ -362,13 +388,15 @@ nav {
   .left {
     font-size: 1.6rem;
     line-height: 1.8;
-      @include mq-tablet {
-    width: 30%;
+
+    @include mq-tablet {
+      width: 30%;
     }
   }
+
   .right {
-      @include mq-tablet {
-    width: 45%;
+    @include mq-tablet {
+      width: 45%;
     }
   }
 
@@ -398,8 +426,8 @@ nav {
 
   .fa-send::before {
     content: "\f1d8";
-    margin:0;
-    margin-left:0.5rem;
+    margin: 0;
+    margin-left: 0.5rem;
   }
 
   span:after {
@@ -438,7 +466,7 @@ textarea {
   box-shadow: $shadow;
 }
 
-textarea{
+textarea {
   height: 100px;
 }
 
@@ -467,11 +495,12 @@ button {
   box-shadow: $shadow;
   margin-left: 50%;
   width: 50%;
+
   @include mq-tablet {
-  margin-left: 60%;
-  width: 40%;
+    margin-left:70%;
+    width: 30%;
     letter-spacing: 0.5rem;
-}
+  }
 }
 
 button:hover,
@@ -494,9 +523,9 @@ button:hover,
 .contact .thxMessage {
   display: none;
 
-p {
-  font-size: 1.2rem;
-}
+  p {
+    font-size: 1.2rem;
+  }
 }
 
 footer {
@@ -520,41 +549,64 @@ footer {
 }
 
 //banner
+.banner {
+
+  .bn-decs .flex {
+    margin-left: 1rem;
+    /*      flex-direction: column;*/
+    align-items: center;
+  }
+
+  i::before {
+    margin-left: 1rem;
+    content: "\f08e ";
+    color: #fff;
+  }
+
+  @media screen and (min-width: 768px) {
+    .item {
+      width: calc((100%/4) - 15px);
+    }
+  }
+}
+
+.bn-inner {
+  padding: 10px;
+    @include mq-tablet {
+  padding: 60px;
+  }
+}
+
 .bntop {
-  padding-top: 150px;
+  padding: 150px 10px 0;
   line-height: 1.4;
   position: relative;
 
+  &.flex {
+align-items: center;
+    flex-direction: column;
+  }
+
   img {
-    position: absolute;
-    right: 10px;
-    bottom: 0;
     width: 150px;
   }
+
 }
 
-.portfolio-site {
-  max-width: 220px;
-  padding: 10px;
-  background-color: $acs;
-  border-radius: 4px;
-  margin-bottom: 80px;
+.tag {
 
-  p {
-    color: $wh;
-    font-weight: 600;
-  }
-}
+  .s300,
+  .trace,
+  .redesign {
+    box-shadow: $shadow;
+    padding: 10px;
+    border-radius: 6px;
 
-.tag > div {
-  box-shadow: $shadow;
-  padding: 10px;
-  border-radius: 6px;
-
-  &::before {
-    color: $wh;
-    font-size: 1.6rem;
-    font-weight: 600;
+    &::before {
+      color: $wh;
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
   }
 }
 
@@ -581,5 +633,18 @@ footer {
 
   &::before {
     content: "redesign";
+  }
+}
+
+.portfolio-site {
+  max-width: 220px;
+  padding: 10px;
+  background-color: $acs;
+  border-radius: 4px;
+  margin-bottom: 80px;
+
+  p {
+    color: $wh;
+    font-weight: 600;
   }
 }
