@@ -303,7 +303,7 @@ nav {
     font-size: 2rem;
     font-weight: 600;
     font-family: ubuntu;
-      transition: 0.5s;
+    transition: 0.5s;
 
     &::after {
       content: '';
@@ -314,7 +314,8 @@ nav {
       border-width: 0 0 15px 15px;
       border-color: transparent transparent $acs transparent;
     }
-    &:hover{
+
+    &:hover {
       opacity: 0.8;
       transition: 0.5s;
     }
@@ -546,7 +547,7 @@ footer {
     bottom: 10px;
     right: 10px;
     border-radius: 50%;
-    background-color:$wh;
+    background-color: $wh;
     border: 2px solid $wh;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
 
@@ -606,10 +607,11 @@ footer {
 }
 
 .tag {
-
   .s300,
   .trace,
-  .redesign {
+  .redesign,
+  .original,
+  .school {
     box-shadow: $shadow;
     padding: 10px;
     border-radius: 6px;
@@ -620,11 +622,13 @@ footer {
       font-weight: 600;
     }
   }
+  div:nth-of-type(2),div:nth-of-type(3){
+    margin-left: 15px;
+  }
 }
 
 .s300 {
   background: #28a838;
-
   &::before {
     content: "300x250";
   }
@@ -632,8 +636,6 @@ footer {
 
 .trace {
   background: #fabd00;
-  margin-left: 20px;
-
   &::before {
     content: "Trace";
   }
@@ -641,10 +643,22 @@ footer {
 
 .redesign {
   background: #dc097b;
-  margin-left: 20px;
-
   &::before {
     content: "redesign";
+  }
+}
+
+.original {
+  background: #0911dc;
+  &::before {
+    content: "original";
+  }
+}
+
+.school {
+  background: #3d3e30;
+  &::before {
+    content: "school";
   }
 }
 
@@ -670,9 +684,10 @@ footer {
 .thxmes {
   padding-top: 160px;
   line-height: 1.6;
-img {
-  margin-top: 50px;
-}
+
+  img {
+    margin-top: 50px;
+  }
 }
 
 .go-home a {
