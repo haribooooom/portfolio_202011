@@ -502,6 +502,16 @@ footer .lower {
   padding: 10px 0;
 }
 
+.work-page .wrapper {
+  margin: 0 auto;
+  max-width: 1080px;
+}
+.work-page h3 {
+  text-align: center;
+  font-weight: 600;
+  color: aquamarine;
+}
+
 .banner .bn-decs .flex {
   margin-left: 1rem;
   align-items: center;
