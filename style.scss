@@ -540,9 +540,15 @@ footer {
   color: $wh;
 
   #topBtn {
+    width: 80xp;
+    height: 80px;
     position: fixed;
-    bottom: 0;
+    bottom: 10px;
     right: 10px;
+    border-radius: 50%;
+    background-color:$wh;
+    border: 2px solid $wh;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
 
     &:hover {
       cursor: pointer;
@@ -554,7 +560,7 @@ footer {
   }
 }
 
-//banner
+//banner page
 .banner {
 
   .bn-decs .flex {
@@ -658,6 +664,8 @@ footer {
   }
 
 }
+
+//thanks page
 
 .thxmes {
   padding-top: 160px;
