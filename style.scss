@@ -100,6 +100,9 @@ label {
   .tab-flex {
     display: flex;
   }
+  .tab-none{
+    display: none;
+  }
 }
 
 /* js */
@@ -488,7 +491,7 @@ textarea {
 
 button {
   margin-top: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   background-color: $acs;
   padding: 10px 0;
   -ms-border-radius: 5px;
@@ -695,7 +698,7 @@ footer {
 }
 
 //thanks page
-
+.thanks{
 .thxmes {
   padding-top: 160px;
   line-height: 1.6;
@@ -704,6 +707,8 @@ footer {
     margin-top: 50px;
   }
 }
+}
+
 
 .go-home a {
   text-decoration: underline;

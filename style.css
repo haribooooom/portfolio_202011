@@ -100,6 +100,10 @@ label {
   .tab-flex {
     display: flex;
   }
+
+  .tab-none {
+    display: none;
+  }
 }
 /* js */
 .js-anime {
@@ -431,7 +435,7 @@ textarea {
 
 button {
   margin-top: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   background-color: #E83418;
   padding: 10px 0;
   -ms-border-radius: 5px;
@@ -618,11 +622,11 @@ footer .lower {
   font-weight: 600;
 }
 
-.thxmes {
+.thanks .thxmes {
   padding-top: 160px;
   line-height: 1.6;
 }
-.thxmes img {
+.thanks .thxmes img {
   margin-top: 50px;
 }
 
