@@ -1,0 +1,52 @@
+@charset 'utf-8';
+
+/*reset
+-----------------------------------*/
+html,body,header,nav,section,main,footer,h1,h2,h3,p,ul,li,dl,dt,dd,a {
+  margin: 0;
+  padding: 0;
+  line-height: 1.0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+/*フルードイメージ 設定*/
+
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*pseud-class*/
+a:link {
+  color: inherit;
+}
+
+a:visited {
+  color: #7921c5;
+}
+
+a:hover {
+  color: #323232;
+}
+
+a > img: {
+  transition: opacity 0.2s linear;
+}
+
+a:hover > img {
+  opacity: 0.7;
+}
