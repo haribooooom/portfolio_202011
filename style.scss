@@ -261,9 +261,73 @@ header {
   }
 }
 
+.tag {
+
+  .s300,
+  .trace,
+  .redesign,
+  .original,
+  .school {
+    box-shadow: $shadow;
+    padding: 6px 8px;
+    border-radius: 6px;
+
+    &::before {
+      color: $wh;
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+  }
+
+  div:nth-of-type(2),
+  div:nth-of-type(3) {
+    margin-left: 15px;
+  }
+}
+
+.s300 {
+  background: #5ab165;
+
+  &::before {
+    content: "300x250";
+  }
+}
+
+.trace {
+  background: #fc9c1a;
+
+  &::before {
+    content: "Trace";
+  }
+}
+
+.redesign {
+  background: #c44389;
+
+  &::before {
+    content: "redesign";
+  }
+}
+
+.original {
+  background: #393ec3;
+
+  &::before {
+    content: "original";
+  }
+}
+
+.school {
+  background: #3d3e30;
+
+  &::before {
+    content: "school";
+  }
+}
+
 .card {
   position: relative;
-  padding: 12px 16px;
+  padding: 16px;
 
   &::after {
     border-color: transparent transparent #023067 transparent;
@@ -277,7 +341,7 @@ header {
 
   h3 {
     text-align: center;
-    margin-bottom: 6px;
+    margin-bottom: 16px;
   }
 
   @include mq-tablet {
@@ -394,6 +458,25 @@ footer {
   .inner {
     @include mq-tablet {
       padding: 40px 60px 110px;
+    }
+  }
+  .trace-desc {
+    background-color:$wh;
+    padding: 20px;
+    box-shadow: $shadow;
+    line-height: 1.4;
+    flex-direction: column;
+      @include mq-tablet {
+        margin-bottom: 0;
+        flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    }
+    .trace{
+      margin-bottom: 20px;
+    }
+    ol li{
+      list-style: decimal;
     }
   }
 }
@@ -547,44 +630,29 @@ button {
 }
 
 .links {
-  text-align: center;
-  margin: 0 auto;
-  justify-content: space-around;
-    @include mq-tablet {
-  width: 40%;
-      flex-direction: row;
-  }
 }
 
 .link {
+  margin: 0 auto;
   margin-bottom: 40px;
 }
 
 .link a {
-  padding: 15px;
+  padding:8px 10px;
   border-radius: 3px;
   box-shadow: $shadow;
-    @include mq-tablet {
-      width: auto;
+  color: $wh;
+  @include mq-tablet {
+  padding:18px 20px;
   }
 }
 
 .github a {
-  background-color: $bl;
-  color: $wh;
-
-  i {
-    margin-left: 0.8rem;
-  }
+  background-color: #989898;
 }
 
 .demo a {
-  background-color: #fff;
-  color: $bl;
-
-  i {
-    margin-right: 0.8rem;
-  }
+  background-color: #e2400f;
 }
 
 
@@ -641,69 +709,7 @@ button {
 
 }
 
-.tag {
 
-  .s300,
-  .trace,
-  .redesign,
-  .original,
-  .school {
-    box-shadow: $shadow;
-    padding: 6px 8px;
-    border-radius: 6px;
-
-    &::before {
-      color: $wh;
-      font-size: 1.6rem;
-      font-weight: 600;
-    }
-  }
-
-  div:nth-of-type(2),
-  div:nth-of-type(3) {
-    margin-left: 15px;
-  }
-}
-
-.s300 {
-  background: #5ab165;
-
-  &::before {
-    content: "300x250";
-  }
-}
-
-.trace {
-  background: #fc9c1a;
-
-  &::before {
-    content: "Trace";
-  }
-}
-
-.redesign {
-  background: #c44389;
-
-  &::before {
-    content: "redesign";
-  }
-}
-
-.original {
-  background: #393ec3;
-
-  &::before {
-    content: "original";
-  }
-}
-
-.school {
-  background: #3d3e30;
-
-  &::before {
-    content: "school";
-  }
-}
 
 .portfolio-site {
   padding: 30px 10px;
@@ -719,7 +725,6 @@ button {
       font-weight: 600;
     }
   }
-
 }
 
 //thanks page

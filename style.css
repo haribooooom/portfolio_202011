@@ -243,9 +243,67 @@ textarea {
   border-color: transparent transparent #E83418 transparent;
 }
 
+.tag .s300,
+.tag .trace,
+.tag .redesign,
+.tag .original,
+.tag .school {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+.tag .s300::before,
+.tag .trace::before,
+.tag .redesign::before,
+.tag .original::before,
+.tag .school::before {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.tag div:nth-of-type(2),
+.tag div:nth-of-type(3) {
+  margin-left: 15px;
+}
+
+.s300 {
+  background: #5ab165;
+}
+.s300::before {
+  content: "300x250";
+}
+
+.trace {
+  background: #fc9c1a;
+}
+.trace::before {
+  content: "Trace";
+}
+
+.redesign {
+  background: #c44389;
+}
+.redesign::before {
+  content: "redesign";
+}
+
+.original {
+  background: #393ec3;
+}
+.original::before {
+  content: "original";
+}
+
+.school {
+  background: #3d3e30;
+}
+.school::before {
+  content: "school";
+}
+
 .card {
   position: relative;
-  padding: 12px 16px;
+  padding: 16px;
 }
 .card::after {
   border-color: transparent transparent #023067 transparent;
@@ -257,7 +315,7 @@ textarea {
 }
 .card h3 {
   text-align: center;
-  margin-bottom: 6px;
+  margin-bottom: 16px;
 }
 @media screen and (min-width: 768px) {
   .card {
@@ -353,6 +411,27 @@ footer .lower {
   .gallery .inner {
     padding: 40px 60px 110px;
   }
+}
+.gallery .trace-desc {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  line-height: 1.4;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .gallery .trace-desc {
+    margin-bottom: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+.gallery .trace-desc .trace {
+  margin-bottom: 20px;
+}
+.gallery .trace-desc ol li {
+  list-style: decimal;
 }
 
 @media screen and (min-width: 768px) {
@@ -485,47 +564,29 @@ button {
   max-width: 1080px;
 }
 
-.links {
-  text-align: center;
-  margin: 0 auto;
-  justify-content: space-around;
-}
-@media screen and (min-width: 768px) {
-  .links {
-    width: 40%;
-    flex-direction: row;
-  }
-}
-
 .link {
+  margin: 0 auto;
   margin-bottom: 40px;
 }
 
 .link a {
-  padding: 15px;
+  padding: 8px 10px;
   border-radius: 3px;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  color: #fff;
 }
 @media screen and (min-width: 768px) {
   .link a {
-    width: auto;
+    padding: 18px 20px;
   }
 }
 
 .github a {
-  background-color: #333;
-  color: #fff;
-}
-.github a i {
-  margin-left: 0.8rem;
+  background-color: #989898;
 }
 
 .demo a {
-  background-color: #fff;
-  color: #333;
-}
-.demo a i {
-  margin-right: 0.8rem;
+  background-color: #e2400f;
 }
 
 .banner .bn-decs .flex {
@@ -570,64 +631,6 @@ button {
 }
 .bntop img {
   width: 150px;
-}
-
-.tag .s300,
-.tag .trace,
-.tag .redesign,
-.tag .original,
-.tag .school {
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-  padding: 6px 8px;
-  border-radius: 6px;
-}
-.tag .s300::before,
-.tag .trace::before,
-.tag .redesign::before,
-.tag .original::before,
-.tag .school::before {
-  color: #fff;
-  font-size: 1.6rem;
-  font-weight: 600;
-}
-.tag div:nth-of-type(2),
-.tag div:nth-of-type(3) {
-  margin-left: 15px;
-}
-
-.s300 {
-  background: #5ab165;
-}
-.s300::before {
-  content: "300x250";
-}
-
-.trace {
-  background: #fc9c1a;
-}
-.trace::before {
-  content: "Trace";
-}
-
-.redesign {
-  background: #c44389;
-}
-.redesign::before {
-  content: "redesign";
-}
-
-.original {
-  background: #393ec3;
-}
-.original::before {
-  content: "original";
-}
-
-.school {
-  background: #3d3e30;
-}
-.school::before {
-  content: "school";
 }
 
 .portfolio-site {
