@@ -147,12 +147,11 @@ label {
 
 header {
   width: 100%;
-  height: 80px;
-  padding: 15px;
+  position: relative;
+  padding: 0 15px;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(1.5px);
   box-shadow: $shadow;
-  position: fixed;
   z-index: 999;
 
   .flex {
@@ -161,17 +160,19 @@ header {
 }
 
 .logo img {
-  height: 50px;
+  height: 40px;
   margin-right: 1.5rem;
 }
 
-nav {
+.g-nav {
   width: calc(100vw - 85px);
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
+  z-index: 999;
 
   li {
     a {
+      line-height: 60px;
       font-size: 1.2rem;
       position: relative;
       display: inline-block;
@@ -182,20 +183,7 @@ nav {
       }
     }
 
-    a::after {
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      content: '';
-      width: 100%;
-      height: 2px;
-      background: #333;
-      transform: scale(0, 1);
-      transform-origin: left top;
-      transition: transform .3s;
-    }
-
-    a:hover::after {
+    &:hover::after {
       transform: scale(1, 1);
     }
   }
@@ -210,6 +198,16 @@ nav {
       font-weight: 600;
     }
   }
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.g-nav-menu li {
+  line-height: 40px;
 }
 
 .items,
