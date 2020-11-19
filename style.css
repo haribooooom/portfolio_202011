@@ -484,17 +484,48 @@ button {
   padding: 5% 3%;
   max-width: 1080px;
 }
-.work-page .tab-flex {
-  justify-content: space-between;
-}
-.work-page h3 {
-  margin-bottom: 30px;
+
+.links {
   text-align: center;
-  font-weight: 600;
+  margin: 0 auto;
+  justify-content: space-around;
 }
-.work-page .desc {
-  padding: 20px;
-  background-color: antiquewhite;
+@media screen and (min-width: 768px) {
+  .links {
+    width: 40%;
+    flex-direction: row;
+  }
+}
+
+.link {
+  margin-bottom: 40px;
+}
+
+.link a {
+  padding: 15px;
+  border-radius: 3px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 768px) {
+  .link a {
+    width: auto;
+  }
+}
+
+.github a {
+  background-color: #333;
+  color: #fff;
+}
+.github a i {
+  margin-left: 0.8rem;
+}
+
+.demo a {
+  background-color: #fff;
+  color: #333;
+}
+.demo a i {
+  margin-right: 0.8rem;
 }
 
 .banner .bn-decs .flex {
