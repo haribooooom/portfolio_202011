@@ -25,7 +25,6 @@
   showElementAnimation();
   window.addEventListener('scroll', showElementAnimation);
 
-
   $(function () {
     $('#topBtn').on('click', function () {
       $('html,body').animate({
