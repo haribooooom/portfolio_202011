@@ -243,7 +243,7 @@ textarea {
   border-color: transparent transparent #E83418 transparent;
 }
 
-.tag .s300,
+.tag .cliant,
 .tag .trace,
 .tag .redesign,
 .tag .original,
@@ -252,7 +252,7 @@ textarea {
   padding: 6px 8px;
   border-radius: 6px;
 }
-.tag .s300::before,
+.tag .cliant::before,
 .tag .trace::before,
 .tag .redesign::before,
 .tag .original::before,
@@ -266,11 +266,11 @@ textarea {
   margin-left: 15px;
 }
 
-.s300 {
+.cliant {
   background: #5ab165;
 }
-.s300::before {
-  content: "300x250";
+.cliant::before {
+  content: "cliant";
 }
 
 .trace {

@@ -151,6 +151,7 @@ header {
   padding: 0 15px;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(1.5px);
+//  filter: blur(1.5px);
   box-shadow: $shadow;
   z-index: 999;
 
@@ -263,7 +264,7 @@ header {
 
 .tag {
 
-  .s300,
+  .cliant,
   .trace,
   .redesign,
   .original,
@@ -285,11 +286,11 @@ header {
   }
 }
 
-.s300 {
+.cliant {
   background: #5ab165;
 
   &::before {
-    content: "300x250";
+    content: "cliant";
   }
 }
 
