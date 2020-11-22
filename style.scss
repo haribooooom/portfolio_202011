@@ -711,13 +711,19 @@ a {
 
 
 .portfolio-site {
+    margin: 0 auto;
+    width: 320px;
   padding: 30px 10px;
+    @include mq-tablet {
+      width: 400px;
+    }
 
   button {
     width: 100%;
     border-radius: 4px;
-
-    @include mq-tablet {}
+  @include mq-tablet {
+  padding: 20px 0;
+}
 
     p {
       color: $wh;

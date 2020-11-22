@@ -634,11 +634,23 @@ button {
 }
 
 .portfolio-site {
+  margin: 0 auto;
+  width: 320px;
   padding: 30px 10px;
+}
+@media screen and (min-width: 768px) {
+  .portfolio-site {
+    width: 400px;
+  }
 }
 .portfolio-site button {
   width: 100%;
   border-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+  .portfolio-site button {
+    padding: 20px 0;
+  }
 }
 .portfolio-site button p {
   color: #fff;
