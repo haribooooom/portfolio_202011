@@ -34,10 +34,10 @@ body {
 
 .inner {
   margin: 0 auto;
-  padding: 40px 15px 60px;
+  padding: 60px 15px;
 
   @include mq-tablet {
-    padding: 60px 0 80px;
+    padding: 120px 0 80px;
   }
 }
 
@@ -213,6 +213,7 @@ header {
 
 .items,
 .cards {
+   margin-bottom: 50px;
   @include mq-tablet {
     margin: 0 auto;
     display: flex;
@@ -352,6 +353,8 @@ header {
 }
 
 footer {
+    background-image: url(img/border-sp.png);
+  background-repeat: repeat-x;
   position: relative;
   background-color: $bl;
   color: $wh;
@@ -380,6 +383,8 @@ footer {
 
 //about
 .description {
+    background-image: url(img/border-sp.png);
+  background-repeat: repeat-x;
   background-color: #F8F6E7;
 
   .inner {
@@ -470,6 +475,8 @@ footer {
 
 //contact
 .contact {
+  background-image: url(img/border-sp.png);
+  background-repeat: repeat-x;
   @include mq-tablet {
     .tab-flex {
       justify-content: space-around;
@@ -612,23 +619,28 @@ button {
 
 }
 
-.links {}
-
 .link {
   margin: 0 auto;
   margin-bottom: 40px;
-}
-
-.link a {
+  i:before{
+    margin: 0;
+    margin-left: 1rem;
+  }
+a {
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
   padding: 8px 10px;
   border-radius: 3px;
   box-shadow: $shadow;
   color: $wh;
 
+
   @include mq-tablet {
-    padding: 18px 20px;
+    padding: 16px 20px;
   }
 }
+}
+
 
 .github a {
   background-color: #989898;

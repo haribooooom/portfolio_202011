@@ -324,6 +324,8 @@ textarea {
 }
 
 footer {
+  background-image: url(img/border-sp.png);
+  background-repeat: repeat-x;
   position: relative;
   background-color: #333;
   color: #fff;
@@ -344,6 +346,8 @@ footer .lower {
 }
 
 .description {
+  background-image: url(img/border-sp.png);
+  background-repeat: repeat-x;
   background-color: #F8F6E7;
 }
 @media screen and (min-width: 768px) {
@@ -413,6 +417,10 @@ footer .lower {
   }
 }
 
+.contact {
+  background-image: url(img/border-sp.png);
+  background-repeat: repeat-x;
+}
 @media screen and (min-width: 768px) {
   .contact .tab-flex {
     justify-content: space-around;
