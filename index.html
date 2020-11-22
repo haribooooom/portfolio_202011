@@ -1,15 +1,32 @@
 <!doctype html>
 <html lang="ja">
 
-<head>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Noma Portfolio | 野﨑 まどかのポートフォリオサイト </title>
+  <meta name="description" content="Web/UIUXデザイナーを志望する、野﨑まどかのポートフォリオサイトです。自身の紹介といくつかの作品を掲載しています。" />
+  <meta name="robots" content="noindex,nofollow" />
+
+  <meta property="og:url" content="http://haribooom.html.xdomain.jp/" />
+  <meta property="og:title" content="Noma Portfolio | 野﨑 まどかのポートフォリオサイト" />
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="記事の抜粋" />
+  <meta property="og:image" content="画像のURL" />
+  <meta name="twitter:card" content="カード種類" />
+  <meta name="twitter:site" content="@haribooooom" />
+  <meta property="og:site_name" content="Noma Portfolio" />
+  <meta property="og:locale" content="ja_JP" />
+
+<!--font-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <script src="https://sdk.form.run/js/v2/formrun.js"></script>
   <link rel="icon" type="image/x-icon" href="img/logo.png">
+  <link rel="apple-touch-icon-precomposed" href="img/logo-wh.png" />
+
+  <script src="https://sdk.form.run/js/v2/formrun.js"></script>
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/style.css">
   <style media="screen">
@@ -19,6 +36,7 @@
       width: 1px;
       overflow: hidden;
     }
+
   </style>
 </head>
 
@@ -41,7 +59,8 @@
       <!--__inner-->
     </header>
     <div class="top center" id="top">
-      <h1 class="mb50">Noma's Portfolio</h1><img class="lazyload mb50 js-anime" src="img/border-sp.png" alt="">
+      <h1 class="mb50">Noma's Portfolio</h1>
+      <img class="lazyload mb50 js-anime" src="img/hedgehog.png" alt="">
       <div class="mes mb20">
         <p class="big">Thank you for visiting ! <br>This is Madoka Nozaki’s Portfolio Site.</p>
       </div>
@@ -342,5 +361,8 @@
   <script src="js/lazyload.min.js"></script>
   <script>
     $("img.lazyload").lazyload();
+
   </script>
-</body></html>
+</body>
+
+</html>
