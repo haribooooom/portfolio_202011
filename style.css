@@ -488,6 +488,7 @@ i::before {
 form {
   margin: 0 auto;
   width: 100%;
+  text-align: end;
 }
 
 input,
@@ -510,6 +511,7 @@ textarea {
 
 textarea {
   height: 150px;
+  margin-bottom: 50px;
 }
 
 ::-webkit-input-placeholder,
@@ -523,7 +525,7 @@ button {
   margin-top: 10px;
   margin-bottom: 60px;
   background-color: #E83418;
-  padding: 10px 0;
+  padding: 16px 24px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
@@ -534,13 +536,9 @@ button {
   cursor: pointer;
   color: #fff;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-  margin-left: 65%;
-  width: 35%;
 }
 @media screen and (min-width: 768px) {
   button {
-    margin-left: 70%;
-    width: 30%;
     letter-spacing: 0.5rem;
   }
 }
@@ -565,7 +563,6 @@ button {
 }
 .link i:before {
   margin: 0;
-  margin-left: 1rem;
 }
 .link a {
   font-size: 2rem;
@@ -581,8 +578,20 @@ button {
   }
 }
 
+.ex-link a i::before {
+  margin-left: 1rem;
+  content: "\f08e ";
+  color: #fff;
+}
+
+.github {
+  margin-top: 30px;
+}
 .github a {
   background-color: #989898;
+}
+.github i::before {
+  margin-right: 1rem;
 }
 
 .demo a {
@@ -592,11 +601,6 @@ button {
 .banner .bn-decs .flex {
   margin-left: 1rem;
   align-items: center;
-}
-.banner i::before {
-  margin-left: 1rem;
-  content: "\f08e ";
-  color: #fff;
 }
 .banner .item {
   padding: 20px;

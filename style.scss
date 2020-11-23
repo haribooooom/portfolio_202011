@@ -152,7 +152,7 @@ header {
   padding: 0 15px;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(1.5px);
--webkit-backdrop-filter:blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
   box-shadow: $shadow;
   z-index: 999;
 
@@ -214,7 +214,8 @@ header {
 
 .items,
 .cards {
-   margin-bottom: 50px;
+  margin-bottom: 50px;
+
   @include mq-tablet {
     margin: 0 auto;
     display: flex;
@@ -354,7 +355,7 @@ header {
 }
 
 footer {
-    background-image: url(img/border-sp.png);
+  background-image: url(img/border-sp.png);
   background-repeat: repeat-x;
   position: relative;
   background-color: $bl;
@@ -384,7 +385,7 @@ footer {
 
 //about
 .description {
-    background-image: url(img/border-sp.png);
+  background-image: url(img/border-sp.png);
   background-repeat: repeat-x;
   background-color: $sub;
 
@@ -407,7 +408,7 @@ footer {
     max-width: 240px;
     border-radius: 50%;
     margin-bottom: 25px;
-border: 2px solid $sub;
+    border: 2px solid $sub;
     box-shadow: $shadow;
   }
 
@@ -481,6 +482,7 @@ border: 2px solid $sub;
 .contact {
   background-image: url(img/border-sp.png);
   background-repeat: repeat-x;
+
   @include mq-tablet {
     .tab-flex {
       justify-content: space-around;
@@ -545,6 +547,7 @@ i::before {
 form {
   margin: 0 auto;
   width: 100%;
+  text-align: end;
 }
 
 input,
@@ -568,6 +571,7 @@ textarea {
 
 textarea {
   height: 150px;
+  margin-bottom: 50px;
 }
 
 ::-webkit-input-placeholder,
@@ -582,7 +586,7 @@ button {
   margin-top: 10px;
   margin-bottom: 60px;
   background-color: $acs;
-  padding: 10px 0;
+  padding: 16px 24px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
@@ -593,12 +597,9 @@ button {
   cursor: pointer;
   color: $wh;
   box-shadow: $shadow;
-  margin-left: 65%;
-  width: 35%;
 
   @include mq-tablet {
-    margin-left: 70%;
-    width: 30%;
+//    width: 160px;
     letter-spacing: 0.5rem;
   }
 }
@@ -626,34 +627,50 @@ button {
 .link {
   margin: 0 auto;
   margin-bottom: 40px;
-  i:before{
+
+  i:before {
     margin: 0;
+  }
+
+  a {
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+    padding: 8px 10px;
+    border-radius: 3px;
+    box-shadow: $shadow;
+    color: $wh;
+
+
+    @include mq-tablet {
+      padding: 16px 20px;
+    }
+  }
+}
+
+.ex-link a{
+    i::before {
     margin-left: 1rem;
+    content: "\f08e ";
+    color: #fff;
   }
+}
+
+.github {
+  margin-top: 30px;
+
+  a {
+    background-color: #989898;
+  }
+  i::before{
+    margin-right: 1rem;
+  }
+}
+
+.demo {
 a {
-  font-size: 2rem;
-  letter-spacing: 0.3rem;
-  padding: 8px 10px;
-  border-radius: 3px;
-  box-shadow: $shadow;
-  color: $wh;
-
-
-  @include mq-tablet {
-    padding: 16px 20px;
-  }
-}
-}
-
-
-.github a {
-  background-color: #989898;
-}
-
-.demo a {
   background-color: #e2400f;
 }
-
+}
 
 
 //banner page
@@ -662,12 +679,6 @@ a {
   .bn-decs .flex {
     margin-left: 1rem;
     align-items: center;
-  }
-
-  i::before {
-    margin-left: 1rem;
-    content: "\f08e ";
-    color: #fff;
   }
 
   .item {
@@ -711,19 +722,21 @@ a {
 
 
 .portfolio-site {
-    margin: 0 auto;
-    width: 320px;
+  margin: 0 auto;
+  width: 320px;
   padding: 30px 10px;
-    @include mq-tablet {
-      width: 400px;
-    }
+
+  @include mq-tablet {
+    width: 400px;
+  }
 
   button {
     width: 100%;
     border-radius: 4px;
-  @include mq-tablet {
-  padding: 20px 0;
-}
+
+    @include mq-tablet {
+      padding: 20px 0;
+    }
 
     p {
       color: $wh;
